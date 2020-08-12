@@ -70,7 +70,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="Android,RxJava,">
 
 
 
@@ -81,16 +81,18 @@
 
 
 
-<meta name="description" content="一个想成为Popper的程序员">
-<meta property="og:type" content="website">
-<meta property="og:title" content="PopperEvan">
-<meta property="og:url" content="http://popperevan.work/archives/2018/11/index.html">
+<meta name="description" content="什么是RxJavaRxJava的官方介绍为：  a library for composing asynchronous and event-based programs using observable sequences for the Java VM  中文意思就是:一个库，一个什么样子的库呢。在Java VM上使用可观测的序列来组成异步的、基于事件的程序的库。那么为什么叫Rx？Rx全称为R">
+<meta name="keywords" content="Android,RxJava">
+<meta property="og:type" content="article">
+<meta property="og:title" content="RxJava从入门到放弃（一）">
+<meta property="og:url" content="http://popperevan.work/RxJava从入门到放弃（一）.html">
 <meta property="og:site_name" content="PopperEvan">
-<meta property="og:description" content="一个想成为Popper的程序员">
+<meta property="og:description" content="什么是RxJavaRxJava的官方介绍为：  a library for composing asynchronous and event-based programs using observable sequences for the Java VM  中文意思就是:一个库，一个什么样子的库呢。在Java VM上使用可观测的序列来组成异步的、基于事件的程序的库。那么为什么叫Rx？Rx全称为R">
 <meta property="og:locale" content="zh-tw">
+<meta property="og:updated_time" content="2018-12-07T09:49:57.358Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="PopperEvan">
-<meta name="twitter:description" content="一个想成为Popper的程序员">
+<meta name="twitter:title" content="RxJava从入门到放弃（一）">
+<meta name="twitter:description" content="什么是RxJavaRxJava的官方介绍为：  a library for composing asynchronous and event-based programs using observable sequences for the Java VM  中文意思就是:一个库，一个什么样子的库呢。在Java VM上使用可观测的序列来组成异步的、基于事件的程序的库。那么为什么叫Rx？Rx全称为R">
 
 
 
@@ -120,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="http://popperevan.work/archives/2018/11/">
+  <link rel="canonical" href="http://popperevan.work/RxJava从入门到放弃（一）.html">
 
 
 
 
 
-  <title>歸檔 | PopperEvan</title>
+  <title>RxJava从入门到放弃（一） | PopperEvan</title>
   
 
 
@@ -145,7 +147,7 @@
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -249,107 +251,276 @@
           <div id="content" class="content">
             
 
+  <div id="posts" class="posts-expand">
+    
+
+  
+
   
   
   
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
-
-      <span class="archive-page-counter">
-        
-        
-        
-          
-        
-        嗯..! 目前共計 5 篇文章。 繼續努力。
-      </span>
-
-      
-
-        
-        
-        
-
-        
-          
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2018">2018</h1>
-          </div>
-        
-        
-
-        
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://popperevan.work/RxJava从入门到放弃（一）.html">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Evan">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="PopperEvan">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/Markdown扩展语法.html" itemprop="url">
-              
-                <span itemprop="name">Markdown扩展语法</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">RxJava从入门到放弃（一）</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2018-11-28T23:14:52+08:00" content="2018-11-28">
-          11-28
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">發表於</span>
+              
+              <time title="創建於" itemprop="dateCreated datePublished" datetime="2018-12-07T16:53:49+08:00">
+                2018-12-07
+              </time>
+            
 
-    </header>
-  </article>
+            
+              <span class="post-meta-divider">|</span>
+            
 
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新於&#58;</span>
+              
+              <time title="更新於" itemprop="dateModified" datetime="2018-12-07T17:49:57+08:00">
+                2018-12-07
+              </time>
+            
+          </span>
 
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分類於</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/RxJava学习/" itemprop="url" rel="index">
+                    <span itemprop="name">RxJava学习</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/RxJava从入门到放弃（一）.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/RxJava从入门到放弃（一）.html" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/RxJava从入门到放弃（一）.html" class="leancloud_visitors" data-flag-title="RxJava从入门到放弃（一）">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">閱讀次數&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字數統計&#58;</span>
+                
+                <span title="字數統計">
+                  160 字
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">閱讀時長 &asymp;</span>
+                
+                <span title="閱讀時長">
+                  1 分钟
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="什么是RxJava"><a href="#什么是RxJava" class="headerlink" title="什么是RxJava"></a>什么是RxJava</h1><p><code>RxJava</code>的官方介绍为：</p>
+<blockquote>
+<p>a library for composing asynchronous and event-based programs using observable sequences for the Java VM</p>
+</blockquote>
+<p>中文意思就是:一个库，一个什么样子的库呢。在<code>Java VM</code>上使用可观测的序列来组成异步的、基于事件的程序的库。那么为什么叫<code>Rx</code>？<code>Rx</code>全称为<code>ReactiveX(Reactive Extensions)</code>。什么又叫做<code>Rx</code>,<br>这是一个使用可观察数据流进行异步编程的编程接口，是一个编程模型，目标是提供一致的编程接口，帮助开发者更方便的进行异步和基于事件的程序。</p>
+<p><a href="https://github.com/ReactiveX/RxJava" target="_blank" rel="noopener">RxJava的项目地址</a></p>
 
       
 
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/Markdown基本语法.html" itemprop="url">
-              
-                <span itemprop="name">Markdown基本语法</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2018-11-23T17:27:57+08:00" content="2018-11-23">
-          11-23
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
+        <div>
+          
+          <div>
+    
+        <div style="text-align:center;color: #636363;font-size:14px;letter-spacing: 10px">-----本文结束啦<i class="fa fa-heart"></i>感谢您的阅读-----</div>
+    
+</div>
+          
+        </div>
     </div>
+
+    
+    
+    
+
+   
+
+    
+
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+
+  <li class="post-copyright-author">
+    <strong>本文标题：</strong>
+    RxJava从入门到放弃（一）
+  </li>
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    Evan
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://popperevan.work/RxJava从入门到放弃（一）.html" title="RxJava从入门到放弃（一）">http://popperevan.work/RxJava从入门到放弃（一）.html</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明出处
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Android/" rel="tag"><i class="fa fa-tag"></i> Android</a>
+          
+            <a href="/tags/RxJava/" rel="tag"><i class="fa fa-tag"></i> RxJava</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/Markdown扩展语法.html" rel="next" title="Markdown扩展语法">
+                <i class="fa fa-chevron-left"></i> Markdown扩展语法
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -357,6 +528,13 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
 
         </div>
         
@@ -377,8 +555,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目錄
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            本站概覽
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -476,6 +663,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#什么是RxJava"><span class="nav-number">1.</span> <span class="nav-text">什么是RxJava</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -615,6 +818,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
