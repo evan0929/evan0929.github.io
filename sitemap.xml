@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://blog.popperevan.work/hexo%E7%88%AC%E5%9D%91%E8%AE%B0.html</loc>
+    
+    <lastmod>2020-12-06T13:34:25.250Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://blog.popperevan.work/Typora%E5%BF%AB%E6%8D%B7%E9%94%AE.html</loc>
     
     <lastmod>2020-12-06T12:57:17.426Z</lastmod>
@@ -12,13 +19,6 @@
     <loc>http://blog.popperevan.work/404.html</loc>
     
     <lastmod>2020-08-12T11:37:33.065Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.popperevan.work/hexo%E7%88%AC%E5%9D%91%E8%AE%B0.html</loc>
-    
-    <lastmod>2020-08-12T11:03:52.733Z</lastmod>
     
   </url>
   
