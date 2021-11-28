@@ -6,7 +6,7 @@
   <link href="https://blog.popperevan.work/atom.xml" rel="self"/>
   
   <link href="https://blog.popperevan.work/"/>
-  <updated>2021-11-28T19:01:00.909Z</updated>
+  <updated>2021-11-28T19:00:30.237Z</updated>
   <id>https://blog.popperevan.work/</id>
   
   <author>
@@ -15,28 +15,6 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>Android studio插件</title>
-    <link href="https://blog.popperevan.work/2021/11/29/about/"/>
-    <id>https://blog.popperevan.work/2021/11/29/about/</id>
-    <published>2021-11-28T18:57:48.387Z</published>
-    <updated>2021-11-28T19:01:00.909Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="关于我"><a href="#关于我" class="headerlink" title="关于我"></a>关于我</h1><p>性别：男 </p><p>爱好：女</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;关于我&quot;&gt;&lt;a href=&quot;#关于我&quot; class=&quot;headerlink&quot; title=&quot;关于我&quot;&gt;&lt;/a&gt;关于我&lt;/h1&gt;&lt;p&gt;性别：男 &lt;/p&gt;
-&lt;p&gt;爱好：女&lt;/p&gt;
-</summary>
-      
-    
-    
-    
-    
-  </entry>
   
   <entry>
     <title>Android studio插件</title>
