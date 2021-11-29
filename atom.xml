@@ -6,7 +6,7 @@
   <link href="https://blog.popperevan.work/atom.xml" rel="self"/>
   
   <link href="https://blog.popperevan.work/"/>
-  <updated>2021-11-28T19:00:30.237Z</updated>
+  <updated>2021-11-29T18:22:08.138Z</updated>
   <id>https://blog.popperevan.work/</id>
   
   <author>
@@ -18,10 +18,10 @@
   
   <entry>
     <title>Android studio插件</title>
-    <link href="https://blog.popperevan.work/2021/11/23/android-studio-cha-jian/"/>
-    <id>https://blog.popperevan.work/2021/11/23/android-studio-cha-jian/</id>
+    <link href="https://blog.popperevan.work/posts/8818babb/"/>
+    <id>https://blog.popperevan.work/posts/8818babb/</id>
     <published>2021-11-22T17:04:42.301Z</published>
-    <updated>2021-11-28T19:00:30.237Z</updated>
+    <updated>2021-11-29T18:22:08.138Z</updated>
     
     <content type="html"><![CDATA[<ol><li>CodeGlance</li></ol><p>此插件在你的编辑器中嵌入了代码的<code>缩略图</code></p><ol start="2"><li>Rainbow Brackets</li></ol><p>这个插件为您的代码添加了漂亮的彩虹色，用于圆括号，方括号和大括号。</p><ol start="3"><li>ADB Idea</li></ol><p>ADB Idea提供了单击快捷方式命令，用于启动，卸载，终止应用程序，撤消权限以及清除应用程序数据。</p><ol start="4"><li>ADB Wifi</li></ol><p>确保你的电脑和手机连接在同一网络上，然后转到<code>“Tools”→“ android”→“ ADB WIFI”→“ ADB USB to WIFI”</code>开始连接，现在您无需USB连接，即可运行应用程序。</p><ol start="5"><li>Material UI Theme</li><li>JSON To Kotlin Class</li><li>Codota</li></ol><p>Codota是一个基于AI的代码补全插件，它使用机器学习数百万个代码段（Java，Javascript，Python等），根据您的上下文建议补全代码。它还使你可以直接嵌入通用代码段，以提高开发技能并减少出错的机会。</p><ol start="8"><li>Name That Color</li></ol><p>最匹配的 material颜色调色板名称</p><ol start="9"><li> Key Promoter X</li></ol><p>这是一个IntelliJ IDE插件，可帮助你在工作时学习基本的快捷方式。</p>]]></content>
     
@@ -45,10 +45,10 @@
   
   <entry>
     <title>iTerm2配置和美化</title>
-    <link href="https://blog.popperevan.work/2021/11/22/iterm2-pei-zhi-he-mei-hua/"/>
-    <id>https://blog.popperevan.work/2021/11/22/iterm2-pei-zhi-he-mei-hua/</id>
+    <link href="https://blog.popperevan.work/posts/d2a06635/"/>
+    <id>https://blog.popperevan.work/posts/d2a06635/</id>
     <published>2021-11-22T15:36:17.090Z</published>
-    <updated>2021-11-28T19:41:11.705Z</updated>
+    <updated>2021-11-29T18:22:08.139Z</updated>
     
     <content type="html"><![CDATA[<h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p><code>iTerm2</code>是<code>macOS</code>平台上终端的替代方案，功能也更强大</p><h3 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h3><p><a href="https://iterm2.com/">iTerm2官网</a></p><h3 id="设为默认"><a href="#设为默认" class="headerlink" title="设为默认"></a>设为默认</h3><pre><code>iTerm2 -&gt; Make ITerm2 Default Term</code></pre><h3 id="设置透明度"><a href="#设置透明度" class="headerlink" title="设置透明度"></a>设置透明度</h3><pre><code>iTerm -&gt; Preferences -&gt; Profiles -&gt; window -&gt; Transparency</code></pre><h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><ol><li><p>设置默认shell为zsh</p><ul><li><p>查看系统所有shell列表</p><pre><code>cat /etc/shells</code></pre></li><li><p>查看zsh版本</p><pre><code>zsh --version</code></pre></li><li><p>设置默认 shell 为 zsh，它功能比较多，会好使一些。</p><pre><code>chsh -s /bin/zsh</code></pre></li></ul></li><li><p>安装oh-my-zsh</p><ul><li><p>什么是oh-my-zsh</p><blockquote><p>oh-my-zsh 是一款社区驱动的命令行工具，它基于 zsh 命令行，提供了主题配置，插件机制，大大提高了可玩（用）性。</p></blockquote></li><li><p>下载地址</p><p><a href="https://github.com/ohmyzsh/ohmyzsh">oh-my-zsh</a></p></li><li><p>安装</p><p><strong>以下脚本执行一个</strong>：</p><ul><li><p>wget：</p><pre><code>export REMOTE=https://gitee.com/imirror/ohmyzsh.gitsh -c &quot;$(wget -O- https://cdn.jsdelivr.net/gh/ohmyzsh/ohmyzsh/tools/install.sh)&quot;</code></pre></li><li><p>fetch：</p><pre><code>export REMOTE=https://gitee.com/imirror/ohmyzsh.gitsh -c &quot;$(fetch -o - https://cdn.jsdelivr.net/gh/ohmyzsh/ohmyzsh/tools/install.sh)&quot;</code></pre></li><li><p>curl：</p></li></ul><pre><code>export REMOTE=https://gitee.com/imirror/ohmyzsh.gitsh -c &quot;$(curl -fsSL https://cdn.jsdelivr.net/gh/ohmyzsh/ohmyzsh/tools/install.sh)&quot;</code></pre></li></ul></li><li><p>配置zsh主题</p><ul><li><p>官方主题</p><p><a href="https://github.com/ohmyzsh/ohmyzsh/wiki/Themes">主题</a></p></li><li><p>vim打开<code>~/.zshrc</code>文件</p><pre><code>vim ~/.zshrc</code></pre></li><li><p>更改ZSH_THEME字段为你所选的主题名称</p></li></ul></li><li><p>更改字体</p></li></ol><pre><code class="iTerm">iTerm -&gt; Preferences -&gt; Profiles -&gt; Text</code></pre><ol start="5"><li>功能增强</li></ol><ul><li>5.1 命令自动补全功能</li></ul><p>​    克隆代码到<code>$ZSH_CUSTOM/plugins</code>（默认位于<code>~/.oh-my-zsh/custom/plugins</code>）</p><pre><code>git clone https://gitee.com/imirror/zsh-autosuggestions.git $&#123;ZSH_CUSTOM:-~/.oh-my-zsh/custom&#125;/plugins/zsh-autosuggestions</code></pre><ul><li>5.1.1执行zshrc文件</li></ul><pre><code>source ~/.zshrc</code></pre><ul><li>5.1.2配置插件</li></ul><p>打开<code>~/.zshrc</code>，找到<code>plugins</code>，追加<code>zsh-autosuggestions</code>。</p><ul><li><p>5.2 语法高亮</p></li><li><p>5.21.克隆代码到<code>$ZSH_CUSTOM/plugins</code>（默认位于<code>~/.oh-my-zsh/custom/plugins</code>）</p></li></ul><pre><code>git clone https://gitee.com/imirror/zsh-syntax-highlighting.git $&#123;ZSH_CUSTOM:-~/.oh-my-zsh/custom&#125;/plugins/zsh-syntax-highlighting</code></pre><ul><li>5.2.2 配置启用插件</li></ul><p>打开<code>~/.zshrc</code>，找到<code>plugins</code>，追加<code>zsh-autosuggestions</code>。</p><ul><li>5.2.3执行zshrc文件</li></ul><pre><code>source ~/.zshrc</code></pre>]]></content>
     
