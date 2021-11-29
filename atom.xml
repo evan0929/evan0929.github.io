@@ -6,7 +6,7 @@
   <link href="https://blog.popperevan.work/atom.xml" rel="self"/>
   
   <link href="https://blog.popperevan.work/"/>
-  <updated>2021-11-29T18:22:08.138Z</updated>
+  <updated>2021-11-29T18:22:08.139Z</updated>
   <id>https://blog.popperevan.work/</id>
   
   <author>
@@ -15,33 +15,6 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>Android studio插件</title>
-    <link href="https://blog.popperevan.work/posts/8818babb/"/>
-    <id>https://blog.popperevan.work/posts/8818babb/</id>
-    <published>2021-11-22T17:04:42.301Z</published>
-    <updated>2021-11-29T18:22:08.138Z</updated>
-    
-    <content type="html"><![CDATA[<ol><li>CodeGlance</li></ol><p>此插件在你的编辑器中嵌入了代码的<code>缩略图</code></p><ol start="2"><li>Rainbow Brackets</li></ol><p>这个插件为您的代码添加了漂亮的彩虹色，用于圆括号，方括号和大括号。</p><ol start="3"><li>ADB Idea</li></ol><p>ADB Idea提供了单击快捷方式命令，用于启动，卸载，终止应用程序，撤消权限以及清除应用程序数据。</p><ol start="4"><li>ADB Wifi</li></ol><p>确保你的电脑和手机连接在同一网络上，然后转到<code>“Tools”→“ android”→“ ADB WIFI”→“ ADB USB to WIFI”</code>开始连接，现在您无需USB连接，即可运行应用程序。</p><ol start="5"><li>Material UI Theme</li><li>JSON To Kotlin Class</li><li>Codota</li></ol><p>Codota是一个基于AI的代码补全插件，它使用机器学习数百万个代码段（Java，Javascript，Python等），根据您的上下文建议补全代码。它还使你可以直接嵌入通用代码段，以提高开发技能并减少出错的机会。</p><ol start="8"><li>Name That Color</li></ol><p>最匹配的 material颜色调色板名称</p><ol start="9"><li> Key Promoter X</li></ol><p>这是一个IntelliJ IDE插件，可帮助你在工作时学习基本的快捷方式。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;ol&gt;
-&lt;li&gt;CodeGlance&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;此插件在你的编辑器中嵌入了代码的&lt;code&gt;缩略图&lt;/code&gt;&lt;/p&gt;
-&lt;ol start=&quot;2&quot;&gt;
-&lt;li&gt;Rainbow Brackets&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;这个插件为您的代码添加了漂亮的彩虹色，</summary>
-      
-    
-    
-    
-    
-  </entry>
   
   <entry>
     <title>iTerm2配置和美化</title>
@@ -61,6 +34,39 @@
     
     
     
+    
+  </entry>
+  
+  <entry>
+    <title>Android studio插件</title>
+    <link href="https://blog.popperevan.work/posts/8818babb/"/>
+    <id>https://blog.popperevan.work/posts/8818babb/</id>
+    <published>2018-11-19T16:00:00.000Z</published>
+    <updated>2021-11-29T18:29:15.479Z</updated>
+    
+    <content type="html"><![CDATA[<ol><li>CodeGlance</li></ol><p>此插件在你的编辑器中嵌入了代码的<code>缩略图</code></p><ol start="2"><li>Rainbow Brackets</li></ol><p>这个插件为您的代码添加了漂亮的彩虹色，用于圆括号，方括号和大括号。</p><ol start="3"><li>ADB Idea</li></ol><p>ADB Idea提供了单击快捷方式命令，用于启动，卸载，终止应用程序，撤消权限以及清除应用程序数据。</p><ol start="4"><li>ADB Wifi</li></ol><p>确保你的电脑和手机连接在同一网络上，然后转到<code>“Tools”→“ android”→“ ADB WIFI”→“ ADB USB to WIFI”</code>开始连接，现在您无需USB连接，即可运行应用程序。</p><ol start="5"><li>Material UI Theme</li><li>JSON To Kotlin Class</li><li>Codota</li></ol><p>Codota是一个基于AI的代码补全插件，它使用机器学习数百万个代码段（Java，Javascript，Python等），根据您的上下文建议补全代码。它还使你可以直接嵌入通用代码段，以提高开发技能并减少出错的机会。</p><ol start="8"><li>Name That Color</li></ol><p>最匹配的 material颜色调色板名称</p><ol start="9"><li> Key Promoter X</li></ol><p>这是一个IntelliJ IDE插件，可帮助你在工作时学习基本的快捷方式。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;ol&gt;
+&lt;li&gt;CodeGlance&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;此插件在你的编辑器中嵌入了代码的&lt;code&gt;缩略图&lt;/code&gt;&lt;/p&gt;
+&lt;ol start=&quot;2&quot;&gt;
+&lt;li&gt;Rainbow Brackets&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;这个插件为您的代码添加了漂亮的彩虹色，</summary>
+      
+    
+    
+    
+    <category term="android" scheme="https://blog.popperevan.work/categories/android/"/>
+    
+    
+    <category term="android" scheme="https://blog.popperevan.work/tags/android/"/>
+    
+    <category term="plugins" scheme="https://blog.popperevan.work/tags/plugins/"/>
     
   </entry>
   
