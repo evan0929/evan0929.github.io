@@ -6,7 +6,7 @@
   <link href="https://blog.popperevan.work/atom.xml" rel="self"/>
   
   <link href="https://blog.popperevan.work/"/>
-  <updated>2021-12-02T13:11:29.644Z</updated>
+  <updated>2021-12-02T13:15:09.284Z</updated>
   <id>https://blog.popperevan.work/</id>
   
   <author>
@@ -18,12 +18,33 @@
   
   <entry>
     <title>Typora常用快捷键</title>
-    <link href="https://blog.popperevan.work/posts/0/"/>
-    <id>https://blog.popperevan.work/posts/0/</id>
+    <link href="https://blog.popperevan.work/posts/12a67745/"/>
+    <id>https://blog.popperevan.work/posts/12a67745/</id>
     <published>2018-11-19T16:00:00.000Z</published>
-    <updated>2021-12-02T13:11:29.644Z</updated>
+    <updated>2021-12-02T13:15:09.284Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="本文只要介绍iTerm2在mac-OS上的配置和美化。"><a href="#本文只要介绍iTerm2在mac-OS上的配置和美化。" class="headerlink" title="本文只要介绍iTerm2在mac OS上的配置和美化。"></a>本文只要介绍iTerm2在mac OS上的配置和美化。</h1><span id="more"></span><h1 id="Typora快捷键"><a href="#Typora快捷键" class="headerlink" title="Typora快捷键"></a>Typora快捷键</h1><h2 id="官方介绍"><a href="#官方介绍" class="headerlink" title="官方介绍"></a>官方介绍</h2><p><strong>a markdown editor,markdown reader.</strong></p><h2 id="为什么选择Typora"><a href="#为什么选择Typora" class="headerlink" title="为什么选择Typora"></a>为什么选择Typora</h2><ol><li>轻便简洁</li><li>即时渲染</li><li>可读性强</li><li>学习成本低</li><li>个人习惯：能和开源笔记Joplin结合使用</li></ol><h2 id="与常用markdown语法的区别"><a href="#与常用markdown语法的区别" class="headerlink" title="与常用markdown语法的区别"></a>与常用markdown语法的区别</h2><ol><li>标题、字体等语法支持快捷键</li><li>支持更多的文字格式，可在偏好设置进行设置</li><li>支持更多的对齐方式，如<center>进行居住</li></ol><h2 id="常用快捷键"><a href="#常用快捷键" class="headerlink" title="常用快捷键"></a>常用快捷键</h2><ul><li>加粗 Cmd+B</li><li>标题 <code>Cmd+数字</code> 如一级标题 <code>Cmd+1</code></li><li>插入链接 <code>Cmd+K</code></li><li>代码块 <code>Cmd+option+C</code></li><li>表格 <code>option + Cmd + T</code></li><li>引用 <code>option + Cmd + Q</code></li><li>水平分割线：<code>shift + Cmd + -</code></li><li>斜体 <code>Cmd + I</code></li><li>删除线 <code>control + ~</code></li><li>注释 <code>control + -</code></li><li>显示/隐藏侧边栏 <code>shift + Cmd + L</code></li><li>大纲视图 <code>control + Cmd + 1</code></li><li>文档列表视图 <code>control + Cmd +2</code></li><li>文件树视图：<code>control + Cmd + 3</code></li><li>链接引用 <code>option + Cmd + L</code></li><li>脚注 <code>option + Cmd + R</code></li><li>代码高亮 “`”+回车 选择语言</li><li>下标 H<del>2</del>o</li><li>上标 x^2^</li><li>==高亮==</li><li>目录（TOC）输入[toc] 然后回车，即可创建一个“目录”，TOC从文档中提取所有的标题，其内容将自动更新。</li></ul><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="https://www.jianshu.com/p/cf83d2887ea1">typora快捷键使用</a></p><p><a href="https://sspai.com/post/54912">Typora完全使用详解</a></p>]]></content>
+    <content type="html"><![CDATA[<h1 id="本文只要介绍iTerm2在mac-OS上的配置和美化。"><a href="#本文只要介绍iTerm2在mac-OS上的配置和美化。" class="headerlink" title="本文只要介绍iTerm2在mac OS上的配置和美化。"></a>本文只要介绍iTerm2在mac OS上的配置和美化。</h1><span id="more"></span><h1 id="Typora快捷键"><a href="#Typora快捷键" class="headerlink" title="Typora快捷键"></a>Typora快捷键</h1><h2 id="官方介绍"><a href="#官方介绍" class="headerlink" title="官方介绍"></a>官方介绍</h2><p><strong>a markdown editor,markdown reader.</strong></p><h2 id="为什么选择Typora"><a href="#为什么选择Typora" class="headerlink" title="为什么选择Typora"></a>为什么选择Typora</h2><ol><li>轻便简洁</li><li>即时渲染</li><li>可读性强</li><li>学习成本低</li><li>个人习惯：能和开源笔记Joplin结合使用</li></ol><h2 id="与常用markdown语法的区别"><a href="#与常用markdown语法的区别" class="headerlink" title="与常用markdown语法的区别"></a>与常用markdown语法的区别</h2><ol><li>标题、字体等语法支持快捷键</li><li>支持更多的文字格式，可在偏好设置进行设置</li><li>支持更多的对齐方式，如“<center>”进行居中</li></ol><h2 id="常用快捷键"><a href="#常用快捷键" class="headerlink" title="常用快捷键"></a>常用快捷键</h2><ul><li>加粗 Cmd+B</li><li>标题 <code>Cmd+数字</code> 如一级标题 <code>Cmd+1</code></li><li>插入链接 <code>Cmd+K</code></li><li>代码块 <code>Cmd+option+C</code></li><li>表格 <code>option + Cmd + T</code></li><li>引用 <code>option + Cmd + Q</code></li><li>水平分割线：<code>shift + Cmd + -</code></li><li>斜体 <code>Cmd + I</code></li><li>删除线 <code>control + ~</code></li><li>注释 <code>control + -</code></li><li>显示/隐藏侧边栏 <code>shift + Cmd + L</code></li><li>大纲视图 <code>control + Cmd + 1</code></li><li>文档列表视图 <code>control + Cmd +2</code></li><li>文件树视图：<code>control + Cmd + 3</code></li><li>链接引用 <code>option + Cmd + L</code></li><li>脚注 <code>option + Cmd + R</code></li><li>代码高亮 “`”+回车 选择语言</li><li>下标 H<del>2</del>o</li><li>上标 x^2^</li><li>==高亮==</li><li>目录（TOC）输入[toc] 然后回车，即可创建一个“目录”，TOC从文档中提取所有的标题，其内容将自动更新。</li></ul><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="https://www.jianshu.com/p/cf83d2887ea1">typora快捷键使用</a></p><p><a href="https://sspai.com/post/54912">Typora完全使用详解</a></p>]]></content>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;本文只要介绍iTerm2在mac-OS上的配置和美化。&quot;&gt;&lt;a href=&quot;#本文只要介绍iTerm2在mac-OS上的配置和美化。&quot; class=&quot;headerlink&quot; title=&quot;本文只要介绍iTerm2在mac OS上的配置和美化。&quot;&gt;&lt;/a&gt;本文只要介绍iTerm2在mac OS上的配置和美化。&lt;/h1&gt;</summary>
+    
+    
+    
+    <category term="工具" scheme="https://blog.popperevan.work/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+    <category term="工具" scheme="https://blog.popperevan.work/tags/%E5%B7%A5%E5%85%B7/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>iTerm2配置和美化</title>
+    <link href="https://blog.popperevan.work/posts/d2a06635/"/>
+    <id>https://blog.popperevan.work/posts/d2a06635/</id>
+    <published>2018-11-19T16:00:00.000Z</published>
+    <updated>2021-12-02T13:07:25.422Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="本文只要介绍iTerm2在mac-OS上的配置和美化。"><a href="#本文只要介绍iTerm2在mac-OS上的配置和美化。" class="headerlink" title="本文只要介绍iTerm2在mac OS上的配置和美化。"></a>本文只要介绍iTerm2在mac OS上的配置和美化。</h1><span id="more"></span><h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p><code>iTerm2</code>是<code>macOS</code>平台上终端的替代方案，功能也更强大</p><h3 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h3><p><a href="https://iterm2.com/">iTerm2官网</a></p><h3 id="设为默认"><a href="#设为默认" class="headerlink" title="设为默认"></a>设为默认</h3><pre><code>iTerm2 -&gt; Make ITerm2 Default Term</code></pre><h3 id="设置透明度"><a href="#设置透明度" class="headerlink" title="设置透明度"></a>设置透明度</h3><pre><code>iTerm -&gt; Preferences -&gt; Profiles -&gt; window -&gt; Transparency</code></pre><h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><ol><li><p>设置默认shell为zsh</p><ul><li><p>查看系统所有shell列表</p><pre><code>cat /etc/shells</code></pre></li><li><p>查看zsh版本</p><pre><code>zsh --version</code></pre></li><li><p>设置默认 shell 为 zsh，它功能比较多，会好使一些。</p><pre><code>chsh -s /bin/zsh</code></pre></li></ul></li><li><p>安装oh-my-zsh</p><ul><li><p>什么是oh-my-zsh</p><blockquote><p>oh-my-zsh 是一款社区驱动的命令行工具，它基于 zsh 命令行，提供了主题配置，插件机制，大大提高了可玩（用）性。</p></blockquote></li><li><p>下载地址</p><p><a href="https://github.com/ohmyzsh/ohmyzsh">oh-my-zsh</a></p></li><li><p>安装</p><p><strong>以下脚本执行一个</strong>：</p><ul><li><p>wget：</p><pre><code>export REMOTE=https://gitee.com/imirror/ohmyzsh.gitsh -c &quot;$(wget -O- https://cdn.jsdelivr.net/gh/ohmyzsh/ohmyzsh/tools/install.sh)&quot;</code></pre></li><li><p>fetch：</p><pre><code>export REMOTE=https://gitee.com/imirror/ohmyzsh.gitsh -c &quot;$(fetch -o - https://cdn.jsdelivr.net/gh/ohmyzsh/ohmyzsh/tools/install.sh)&quot;</code></pre></li><li><p>curl：</p></li></ul><pre><code>export REMOTE=https://gitee.com/imirror/ohmyzsh.gitsh -c &quot;$(curl -fsSL https://cdn.jsdelivr.net/gh/ohmyzsh/ohmyzsh/tools/install.sh)&quot;</code></pre></li></ul></li><li><p>配置zsh主题</p><ul><li><p>官方主题</p><p><a href="https://github.com/ohmyzsh/ohmyzsh/wiki/Themes">主题</a></p></li><li><p>vim打开<code>~/.zshrc</code>文件</p><pre><code>vim ~/.zshrc</code></pre></li><li><p>更改ZSH_THEME字段为你所选的主题名称</p></li></ul></li><li><p>更改字体</p></li></ol><pre><code class="iTerm">iTerm -&gt; Preferences -&gt; Profiles -&gt; Text</code></pre><ol start="5"><li>功能增强</li></ol><ul><li>5.1 命令自动补全功能</li></ul><p>​    克隆代码到<code>$ZSH_CUSTOM/plugins</code>（默认位于<code>~/.oh-my-zsh/custom/plugins</code>）</p><pre><code>git clone https://gitee.com/imirror/zsh-autosuggestions.git $&#123;ZSH_CUSTOM:-~/.oh-my-zsh/custom&#125;/plugins/zsh-autosuggestions</code></pre><ul><li>5.1.1执行zshrc文件</li></ul><pre><code>source ~/.zshrc</code></pre><ul><li>5.1.2配置插件</li></ul><p>打开<code>~/.zshrc</code>，找到<code>plugins</code>，追加<code>zsh-autosuggestions</code>。</p><ul><li><p>5.2 语法高亮</p></li><li><p>5.21.克隆代码到<code>$ZSH_CUSTOM/plugins</code>（默认位于<code>~/.oh-my-zsh/custom/plugins</code>）</p></li></ul><pre><code>git clone https://gitee.com/imirror/zsh-syntax-highlighting.git $&#123;ZSH_CUSTOM:-~/.oh-my-zsh/custom&#125;/plugins/zsh-syntax-highlighting</code></pre><ul><li>5.2.2 配置启用插件</li></ul><p>打开<code>~/.zshrc</code>，找到<code>plugins</code>，追加<code>zsh-autosuggestions</code>。</p><ul><li>5.2.3执行zshrc文件</li></ul><pre><code>source ~/.zshrc</code></pre>]]></content>
     
     
     <summary type="html">&lt;h1 id=&quot;本文只要介绍iTerm2在mac-OS上的配置和美化。&quot;&gt;&lt;a href=&quot;#本文只要介绍iTerm2在mac-OS上的配置和美化。&quot; class=&quot;headerlink&quot; title=&quot;本文只要介绍iTerm2在mac OS上的配置和美化。&quot;&gt;&lt;/a&gt;本文只要介绍iTerm2在mac OS上的配置和美化。&lt;/h1&gt;</summary>
@@ -57,27 +78,6 @@
     <category term="android" scheme="https://blog.popperevan.work/tags/android/"/>
     
     <category term="plugins" scheme="https://blog.popperevan.work/tags/plugins/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>iTerm2配置和美化</title>
-    <link href="https://blog.popperevan.work/posts/d2a06635/"/>
-    <id>https://blog.popperevan.work/posts/d2a06635/</id>
-    <published>2018-11-19T16:00:00.000Z</published>
-    <updated>2021-12-02T13:07:25.422Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="本文只要介绍iTerm2在mac-OS上的配置和美化。"><a href="#本文只要介绍iTerm2在mac-OS上的配置和美化。" class="headerlink" title="本文只要介绍iTerm2在mac OS上的配置和美化。"></a>本文只要介绍iTerm2在mac OS上的配置和美化。</h1><span id="more"></span><h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p><code>iTerm2</code>是<code>macOS</code>平台上终端的替代方案，功能也更强大</p><h3 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h3><p><a href="https://iterm2.com/">iTerm2官网</a></p><h3 id="设为默认"><a href="#设为默认" class="headerlink" title="设为默认"></a>设为默认</h3><pre><code>iTerm2 -&gt; Make ITerm2 Default Term</code></pre><h3 id="设置透明度"><a href="#设置透明度" class="headerlink" title="设置透明度"></a>设置透明度</h3><pre><code>iTerm -&gt; Preferences -&gt; Profiles -&gt; window -&gt; Transparency</code></pre><h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><ol><li><p>设置默认shell为zsh</p><ul><li><p>查看系统所有shell列表</p><pre><code>cat /etc/shells</code></pre></li><li><p>查看zsh版本</p><pre><code>zsh --version</code></pre></li><li><p>设置默认 shell 为 zsh，它功能比较多，会好使一些。</p><pre><code>chsh -s /bin/zsh</code></pre></li></ul></li><li><p>安装oh-my-zsh</p><ul><li><p>什么是oh-my-zsh</p><blockquote><p>oh-my-zsh 是一款社区驱动的命令行工具，它基于 zsh 命令行，提供了主题配置，插件机制，大大提高了可玩（用）性。</p></blockquote></li><li><p>下载地址</p><p><a href="https://github.com/ohmyzsh/ohmyzsh">oh-my-zsh</a></p></li><li><p>安装</p><p><strong>以下脚本执行一个</strong>：</p><ul><li><p>wget：</p><pre><code>export REMOTE=https://gitee.com/imirror/ohmyzsh.gitsh -c &quot;$(wget -O- https://cdn.jsdelivr.net/gh/ohmyzsh/ohmyzsh/tools/install.sh)&quot;</code></pre></li><li><p>fetch：</p><pre><code>export REMOTE=https://gitee.com/imirror/ohmyzsh.gitsh -c &quot;$(fetch -o - https://cdn.jsdelivr.net/gh/ohmyzsh/ohmyzsh/tools/install.sh)&quot;</code></pre></li><li><p>curl：</p></li></ul><pre><code>export REMOTE=https://gitee.com/imirror/ohmyzsh.gitsh -c &quot;$(curl -fsSL https://cdn.jsdelivr.net/gh/ohmyzsh/ohmyzsh/tools/install.sh)&quot;</code></pre></li></ul></li><li><p>配置zsh主题</p><ul><li><p>官方主题</p><p><a href="https://github.com/ohmyzsh/ohmyzsh/wiki/Themes">主题</a></p></li><li><p>vim打开<code>~/.zshrc</code>文件</p><pre><code>vim ~/.zshrc</code></pre></li><li><p>更改ZSH_THEME字段为你所选的主题名称</p></li></ul></li><li><p>更改字体</p></li></ol><pre><code class="iTerm">iTerm -&gt; Preferences -&gt; Profiles -&gt; Text</code></pre><ol start="5"><li>功能增强</li></ol><ul><li>5.1 命令自动补全功能</li></ul><p>​    克隆代码到<code>$ZSH_CUSTOM/plugins</code>（默认位于<code>~/.oh-my-zsh/custom/plugins</code>）</p><pre><code>git clone https://gitee.com/imirror/zsh-autosuggestions.git $&#123;ZSH_CUSTOM:-~/.oh-my-zsh/custom&#125;/plugins/zsh-autosuggestions</code></pre><ul><li>5.1.1执行zshrc文件</li></ul><pre><code>source ~/.zshrc</code></pre><ul><li>5.1.2配置插件</li></ul><p>打开<code>~/.zshrc</code>，找到<code>plugins</code>，追加<code>zsh-autosuggestions</code>。</p><ul><li><p>5.2 语法高亮</p></li><li><p>5.21.克隆代码到<code>$ZSH_CUSTOM/plugins</code>（默认位于<code>~/.oh-my-zsh/custom/plugins</code>）</p></li></ul><pre><code>git clone https://gitee.com/imirror/zsh-syntax-highlighting.git $&#123;ZSH_CUSTOM:-~/.oh-my-zsh/custom&#125;/plugins/zsh-syntax-highlighting</code></pre><ul><li>5.2.2 配置启用插件</li></ul><p>打开<code>~/.zshrc</code>，找到<code>plugins</code>，追加<code>zsh-autosuggestions</code>。</p><ul><li>5.2.3执行zshrc文件</li></ul><pre><code>source ~/.zshrc</code></pre>]]></content>
-    
-    
-    <summary type="html">&lt;h1 id=&quot;本文只要介绍iTerm2在mac-OS上的配置和美化。&quot;&gt;&lt;a href=&quot;#本文只要介绍iTerm2在mac-OS上的配置和美化。&quot; class=&quot;headerlink&quot; title=&quot;本文只要介绍iTerm2在mac OS上的配置和美化。&quot;&gt;&lt;/a&gt;本文只要介绍iTerm2在mac OS上的配置和美化。&lt;/h1&gt;</summary>
-    
-    
-    
-    <category term="工具" scheme="https://blog.popperevan.work/categories/%E5%B7%A5%E5%85%B7/"/>
-    
-    
-    <category term="工具" scheme="https://blog.popperevan.work/tags/%E5%B7%A5%E5%85%B7/"/>
     
   </entry>
   
