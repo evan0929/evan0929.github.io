@@ -247,7 +247,7 @@
 
     
         <meta property="article:published_time" content="Fri Nov 23 2018 00:00:00 GMT+0800">
-        <meta property="article:modified_time" content="Thu Dec 02 2021 22:04:11 GMT+0800">
+        <meta property="article:modified_time" content="Thu Dec 02 2021 22:16:21 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -270,7 +270,7 @@
     "mainEntityOfPage": "https://blog.popperevan.work/posts/c677b245/index.html",
     "headline": "Markdown扩展语法",
     "datePublished": "Fri Nov 23 2018 00:00:00 GMT+0800",
-    "dateModified": "Thu Dec 02 2021 22:04:11 GMT+0800",
+    "dateModified": "Thu Dec 02 2021 22:16:21 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "Evan",
@@ -364,6 +364,15 @@
 
     <!-- Left aligned menu below button -->
     
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Markdown%E6%89%A9%E5%B1%95%E8%AF%AD%E6%B3%95"><span class="post-toc-number">1.</span> <span class="post-toc-text">Markdown扩展语法</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%88%A0%E9%99%A4%E7%BA%BF"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">删除线</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E8%A1%A8%E6%A0%BC"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">表格</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%8D%95%E5%85%83%E6%A0%BC%E5%92%8C%E8%A1%A8%E5%A4%B4"><span class="post-toc-number">1.2.1.</span> <span class="post-toc-text">单元格和表头</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%AF%B9%E9%BD%90"><span class="post-toc-number">1.2.2.</span> <span class="post-toc-text">对齐</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E8%A1%A8%E6%A0%BC%E5%92%8C%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95%E7%BB%93%E5%90%88"><span class="post-toc-number">1.2.3.</span> <span class="post-toc-text">表格和基础语法结合</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E4%BB%BB%E5%8A%A1%E5%88%97%E8%A1%A8"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">任务列表</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E9%94%9A"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">锚</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E4%BB%A3%E7%A0%81%E9%AB%98%E4%BA%AE"><span class="post-toc-number">1.5.</span> <span class="post-toc-text">代码高亮</span></a></li></ol></li></ol>
+    </ul>
     
 
 
@@ -523,7 +532,149 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        
+        <h1 id="Markdown扩展语法"><a href="#Markdown扩展语法" class="headerlink" title="Markdown扩展语法"></a>Markdown扩展语法</h1><p>在<a href="https://blog.popperevan.work/posts/5d36ff15/">上一篇文章</a>,记录了Markdown的基本语法，本文记录下我们常用的扩展语法。</p>
+<h2 id="删除线"><a href="#删除线" class="headerlink" title="删除线"></a>删除线</h2><p>当需要表示废弃的文字时或过时的方法，就需要删除线。加删除线的文本，在编译为 Html 后会被<code>&lt;s&gt;</code>和<code>&lt;/s&gt;</code>标签包围。<br>删除线的表现方法是：文字前后用<code>~~</code>包围。切记是半角<code>~</code>而非全角<code>～</code>，注意全角和半角的区别。</p>
+<pre><code>~~要删除的方法~~
+</code></pre>
+<p>效果：<del>要删除的文字</del></p>
+<h2 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h2><p>我是锚点</p>
+<h3 id="单元格和表头"><a href="#单元格和表头" class="headerlink" title="单元格和表头"></a>单元格和表头</h3><p>使用 | 来分隔不同的单元格，使用 - 来分隔表头和其他行：</p>
+<pre><code>姓名  | 代表作
+---- | ---
+苏轼  | 水调歌头
+纳兰性德 | 饮水词
+李太白 | 梦游天姥吟留别
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>姓名</th>
+<th>代表作</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>苏轼</td>
+<td>水调歌头</td>
+</tr>
+<tr>
+<td>纳兰性德</td>
+<td>饮水词</td>
+</tr>
+<tr>
+<td>李太白</td>
+<td>梦游天姥吟留别</td>
+</tr>
+</tbody></table>
+<p>为了美观，可以使用空格对齐不同行的单元格，并在左右两侧都使用 | 来标记单元格边界：</p>
+<pre><code>| 姓名     |        代表作 |
+| ----    | ------------ |
+| 苏轼     |      水调歌头 |
+| 纳兰性德 |        饮水词 |
+| 李太白   | 梦游天姥吟留别 |
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>姓名</th>
+<th>代表作</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>苏轼</td>
+<td>水调歌头</td>
+</tr>
+<tr>
+<td>纳兰性德</td>
+<td>饮水词</td>
+</tr>
+<tr>
+<td>李太白</td>
+<td>梦游天姥吟留别</td>
+</tr>
+</tbody></table>
+<h3 id="对齐"><a href="#对齐" class="headerlink" title="对齐"></a>对齐</h3><p>在表头下方的分隔线标记中加入 :，即可标记下方单元格内容的对齐方式：</p>
+<ul>
+<li><code>:---</code> 代表左对齐</li>
+<li><code>:--:</code> 代表居中对齐</li>
+<li><code>---:</code> 代表右对齐</li>
+</ul>
+<pre><code>| left    |      center | right   |
+| :---    |      :--:   | ---:    |
+| 苏轼    |       李太白  | 纳兰性德 |
+| 水调歌头 | 梦游天姥吟留别 |   饮水词 |
+</code></pre>
+<table>
+<thead>
+<tr>
+<th align="left">left</th>
+<th align="center">center</th>
+<th align="right">right</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">苏轼</td>
+<td align="center">李太白</td>
+<td align="right">纳兰性德</td>
+</tr>
+<tr>
+<td align="left">水调歌头</td>
+<td align="center">梦游天姥吟留别</td>
+<td align="right">饮水词</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>如果不使用对齐标记，单元格中的内容默认左对齐；表头单元格中的内容会一直居中对齐（不同的实现可能会有不同表现）。</p>
+</blockquote>
+<h3 id="表格和基础语法结合"><a href="#表格和基础语法结合" class="headerlink" title="表格和基础语法结合"></a>表格和基础语法结合</h3><pre><code>name | link
+---  | ---
+*百度* | [百度](www.baidu.com)
+**谷歌** | [谷歌](www.google.com)    
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>link</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><em>百度</em></td>
+<td><a href="www.baidu.com">百度</a></td>
+</tr>
+<tr>
+<td><strong>谷歌</strong></td>
+<td><a href="www.google.com">谷歌</a></td>
+</tr>
+</tbody></table>
+<h2 id="任务列表"><a href="#任务列表" class="headerlink" title="任务列表"></a>任务列表</h2><ul>
+<li>尚未完成的任务，文本行以<code>-[ ]</code>开头</li>
+<li>已经完成的任务，文本行以<code>-[x]</code>开头</li>
+</ul>
+<pre><code>- [ ] 尚未开始的任务
+- [x] 已经完成的任务
+</code></pre>
+<ul>
+<li> 尚未开始的任务</li>
+<li> 已经完成的任务</li>
+</ul>
+<h2 id="锚"><a href="#锚" class="headerlink" title="锚"></a>锚</h2><p>　锚是一种特殊的链接，专门用以标志出可供跳转到位置。 　</p>
+<blockquote>
+<p>注意：由于标题可以折叠其下的内容，所以锚可能被它前面的标题折叠起来。此时锚是不起作用的。</p>
+</blockquote>
+<p>示例：在指定位置添加：</p>
+<pre><code>&lt;a id=&quot;jump&quot;&gt;我是锚点&lt;/a&gt;
+</code></pre>
+<p>然后此处添加：</p>
+<pre><code>[跳转锚点](#jump)
+</code></pre>
+<p><a href="#jump">跳转锚点</a></p>
+<h2 id="代码高亮"><a href="#代码高亮" class="headerlink" title="代码高亮"></a>代码高亮</h2><p>格式为:<br>在代码块的符号后面直接加语言 如java</p>
+<pre><code>window.addEventListener(&#39;load&#39;, function() &#123;
+  console.log(&#39;window loaded&#39;);
+&#125;);
+</code></pre>
+<center>-----本文结束啦感谢您的阅读-----
+
         
                 <blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;">
                     <p><strong>
