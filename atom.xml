@@ -6,7 +6,7 @@
   <link href="https://blog.popperevan.work/atom.xml" rel="self"/>
   
   <link href="https://blog.popperevan.work/"/>
-  <updated>2021-12-02T13:40:32.220Z</updated>
+  <updated>2021-12-02T13:45:48.508Z</updated>
   <id>https://blog.popperevan.work/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="https://blog.popperevan.work/posts/d717c770/"/>
     <id>https://blog.popperevan.work/posts/d717c770/</id>
     <published>2020-12-02T13:23:55.000Z</published>
-    <updated>2021-12-02T13:40:32.220Z</updated>
+    <updated>2021-12-02T13:45:48.508Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="本系列文章介绍RxJava库在Android上的使用和源码分析。"><a href="#本系列文章介绍RxJava库在Android上的使用和源码分析。" class="headerlink" title="本系列文章介绍RxJava库在Android上的使用和源码分析。"></a>本系列文章介绍RxJava库在Android上的使用和源码分析。</h1><h1 id="本文只要介绍RxJava库在Android上的基本使用。"><a href="#本文只要介绍RxJava库在Android上的基本使用。" class="headerlink" title="本文只要介绍RxJava库在Android上的基本使用。"></a>本文只要介绍RxJava库在Android上的基本使用。</h1><span id="more"></span><h1 id="什么是RxJava"><a href="#什么是RxJava" class="headerlink" title="什么是RxJava"></a>什么是RxJava</h1><p>​    RxJava的官方介绍：</p><pre><code>a library for composing asynchronous and event-based programs using observable sequences for the Java VM</code></pre><p>​    中文意思就是:一个<strong>库，</strong>一个什么样子的库呢。在<code>Java VM</code>上使用可观测的序列来组成<strong>异步的</strong>、<strong>基于事件</strong>的程序的库。那么为什么叫<code>Rx</code>？<code>Rx</code>全称为<code>ReactiveX(Reactive Extensions)</code>。什么又叫做<code>Rx</code>,<br>这是一个使用<strong>可观察数据流</strong>进行<strong>异步编程</strong>的<strong>编程接口</strong>，是一个编程模型，目标是提供一致的编程接口，帮助开发者更方便的进行异步和基于事件的程序。</p><p>​    <a href="https://github.com/ReactiveX/RxJava">RxJava项目地址</a></p>]]></content>
+    <content type="html"><![CDATA[<h1 id="本系列文章介绍RxJava库在Android上的使用和源码分析。"><a href="#本系列文章介绍RxJava库在Android上的使用和源码分析。" class="headerlink" title="本系列文章介绍RxJava库在Android上的使用和源码分析。"></a>本系列文章介绍RxJava库在Android上的使用和源码分析。</h1><h1 id="本文只要介绍RxJava库在Android上的基本使用。"><a href="#本文只要介绍RxJava库在Android上的基本使用。" class="headerlink" title="本文只要介绍RxJava库在Android上的基本使用。"></a>本文只要介绍RxJava库在Android上的基本使用。</h1><span id="more"></span><h1 id="什么是RxJava"><a href="#什么是RxJava" class="headerlink" title="什么是RxJava"></a>什么是RxJava</h1><p>​    RxJava的官方介绍：</p><pre><code>a library for composing asynchronous and event-based programs using observable sequences for the Java VM</code></pre><p>​    中文意思就是:一个<strong>库，</strong>一个什么样子的库呢。在<code>Java VM</code>上使用可观测的序列来组成<strong>异步的</strong>、<strong>基于事件</strong>的程序的库。那么为什么叫<code>Rx</code>？<code>Rx</code>全称为<code>ReactiveX(Reactive Extensions)</code>。什么又叫做<code>Rx</code>,<br>这是一个使用<strong>可观察数据流</strong>进行<strong>异步编程</strong>的<strong>编程接口</strong>，是一个编程模型，目标是提供一致的编程接口，帮助开发者更方便的进行异步和基于事件的程序。</p><p>​    <a href="https://github.com/ReactiveX/RxJava">RxJava项目地址</a></p><center>-----本文结束啦感谢您的阅读-----]]></content>
     
     
     <summary type="html">&lt;h1 id=&quot;本系列文章介绍RxJava库在Android上的使用和源码分析。&quot;&gt;&lt;a href=&quot;#本系列文章介绍RxJava库在Android上的使用和源码分析。&quot; class=&quot;headerlink&quot; title=&quot;本系列文章介绍RxJava库在Android上的使用和源码分析。&quot;&gt;&lt;/a&gt;本系列文章介绍RxJava库在Android上的使用和源码分析。&lt;/h1&gt;&lt;h1 id=&quot;本文只要介绍RxJava库在Android上的基本使用。&quot;&gt;&lt;a href=&quot;#本文只要介绍RxJava库在Android上的基本使用。&quot; class=&quot;headerlink&quot; title=&quot;本文只要介绍RxJava库在Android上的基本使用。&quot;&gt;&lt;/a&gt;本文只要介绍RxJava库在Android上的基本使用。&lt;/h1&gt;</summary>
