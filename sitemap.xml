@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.popperevan.work/posts/88a80a38/</loc>
+    
+    <lastmod>2021-12-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.popperevan.work/posts/12a67745/</loc>
     
     <lastmod>2021-12-02</lastmod>
@@ -104,7 +113,7 @@
   </url>
   
   <url>
-    <loc>https://blog.popperevan.work/tags/typora-markdown/</loc>
+    <loc>https://blog.popperevan.work/tags/OkHttp/</loc>
     <lastmod>2021-12-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -112,6 +121,13 @@
   
   <url>
     <loc>https://blog.popperevan.work/tags/itrem2-zsh/</loc>
+    <lastmod>2021-12-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.popperevan.work/tags/typora-markdown/</loc>
     <lastmod>2021-12-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
