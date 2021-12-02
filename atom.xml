@@ -6,7 +6,7 @@
   <link href="https://blog.popperevan.work/atom.xml" rel="self"/>
   
   <link href="https://blog.popperevan.work/"/>
-  <updated>2021-11-29T18:43:13.571Z</updated>
+  <updated>2021-12-02T13:32:59.635Z</updated>
   <id>https://blog.popperevan.work/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>RxJava从入门到放弃（一）</title>
+    <link href="https://blog.popperevan.work/posts/d717c770/"/>
+    <id>https://blog.popperevan.work/posts/d717c770/</id>
+    <published>2020-12-02T13:23:55.000Z</published>
+    <updated>2021-12-02T13:32:59.635Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="本系列文章介绍RxJava库在Android上的使用和源码分析。"><a href="#本系列文章介绍RxJava库在Android上的使用和源码分析。" class="headerlink" title="本系列文章介绍RxJava库在Android上的使用和源码分析。"></a>本系列文章介绍RxJava库在Android上的使用和源码分析。</h1><h1 id="本文只要介绍RxJava库在Android上的基本使用。"><a href="#本文只要介绍RxJava库在Android上的基本使用。" class="headerlink" title="本文只要介绍RxJava库在Android上的基本使用。"></a>本文只要介绍RxJava库在Android上的基本使用。</h1><span id="more"></span>]]></content>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;本系列文章介绍RxJava库在Android上的使用和源码分析。&quot;&gt;&lt;a href=&quot;#本系列文章介绍RxJava库在Android上的使用和源码分析。&quot; class=&quot;headerlink&quot; title=&quot;本系列文章介绍RxJava库在Android上的使用和源码分析。&quot;&gt;&lt;/a&gt;本系列文章介绍RxJava库在Android上的使用和源码分析。&lt;/h1&gt;&lt;h1 id=&quot;本文只要介绍RxJava库在Android上的基本使用。&quot;&gt;&lt;a href=&quot;#本文只要介绍RxJava库在Android上的基本使用。&quot; class=&quot;headerlink&quot; title=&quot;本文只要介绍RxJava库在Android上的基本使用。&quot;&gt;&lt;/a&gt;本文只要介绍RxJava库在Android上的基本使用。&lt;/h1&gt;</summary>
+    
+    
+    
+    <category term="android" scheme="https://blog.popperevan.work/categories/android/"/>
+    
+    
+    <category term="android" scheme="https://blog.popperevan.work/tags/android/"/>
+    
+  </entry>
   
   <entry>
     <title>Android studio插件</title>
