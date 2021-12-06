@@ -247,7 +247,7 @@
 
     
         <meta property="article:published_time" content="Thu Dec 03 2020 01:17:29 GMT+0800">
-        <meta property="article:modified_time" content="Fri Dec 03 2021 01:20:30 GMT+0800">
+        <meta property="article:modified_time" content="Fri Dec 03 2021 01:20:47 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -270,7 +270,7 @@
     "mainEntityOfPage": "https://blog.popperevan.work/posts/88a80a38/index.html",
     "headline": "OkHttp基本应用",
     "datePublished": "Thu Dec 03 2020 01:17:29 GMT+0800",
-    "dateModified": "Fri Dec 03 2021 01:20:30 GMT+0800",
+    "dateModified": "Fri Dec 03 2021 01:20:47 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "Evan",
@@ -371,7 +371,7 @@
     </button>
 
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#OkHttp"><span class="post-toc-number">1.</span> <span class="post-toc-text">OkHttp</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E7%AE%80%E4%BB%8B"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">简介</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%AE%98%E7%BD%91"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">官网</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E4%B8%BB%E8%A6%81%E5%8A%9F%E8%83%BD"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">主要功能</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#get%E8%AF%B7%E6%B1%82"><span class="post-toc-number">1.3.1.</span> <span class="post-toc-text">get请求</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#post%E8%AF%B7%E6%B1%82"><span class="post-toc-number">1.3.2.</span> <span class="post-toc-text">post请求</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E6%9C%80%E5%90%8E%E6%9D%A5%E4%B8%AA%E6%B5%81%E7%A8%8B%E5%9B%BE"><span class="post-toc-number">1.3.3.</span> <span class="post-toc-text">最后来个流程图</span></a></li></ol></li></ol></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#OkHttp%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8"><span class="post-toc-number">1.</span> <span class="post-toc-text">OkHttp基本使用</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E7%AE%80%E4%BB%8B"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">简介</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%AE%98%E7%BD%91"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">官网</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E4%B8%BB%E8%A6%81%E5%8A%9F%E8%83%BD"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">主要功能</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#get%E8%AF%B7%E6%B1%82"><span class="post-toc-number">1.3.1.</span> <span class="post-toc-text">get请求</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#post%E8%AF%B7%E6%B1%82"><span class="post-toc-number">1.3.2.</span> <span class="post-toc-text">post请求</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E6%9C%80%E5%90%8E%E6%9D%A5%E4%B8%AA%E6%B5%81%E7%A8%8B%E5%9B%BE"><span class="post-toc-number">1.3.3.</span> <span class="post-toc-text">最后来个流程图</span></a></li></ol></li></ol></li></ol>
     </ul>
     
 
@@ -532,7 +532,7 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <h1 id="OkHttp"><a href="#OkHttp" class="headerlink" title="OkHttp"></a>OkHttp</h1><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>​    OkHttp 是一款高效的HTTP客户端，支持连接同一地址的链接共享同一个socket，通过连接池减小响应延迟，GZIP压缩，请求缓存等优势，核心主要有路由，连接协议，拦截器，代理，安全性认证，连接池以及网络适配。</p>
+        <h1 id="OkHttp基本使用"><a href="#OkHttp基本使用" class="headerlink" title="OkHttp基本使用"></a>OkHttp基本使用</h1><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>​    OkHttp 是一款高效的HTTP客户端，支持连接同一地址的链接共享同一个socket，通过连接池减小响应延迟，GZIP压缩，请求缓存等优势，核心主要有路由，连接协议，拦截器，代理，安全性认证，连接池以及网络适配。</p>
 <h2 id="官网"><a href="#官网" class="headerlink" title="官网"></a>官网</h2><p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://square.github.io/okhttp/">官网地址</a></p>
 <h2 id="主要功能"><a href="#主要功能" class="headerlink" title="主要功能"></a>主要功能</h2><h3 id="get请求"><a href="#get请求" class="headerlink" title="get请求"></a>get请求</h3><p>先上代码：</p>
 <ol>
@@ -1048,6 +1048,14 @@ response.body().byteStream();
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
     
+        <a href="/posts/0/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            上一篇
+        </a>
+    
 
     <!-- Section Spacer -->
     <div class="section-spacer"></div>
@@ -1146,7 +1154,7 @@ response.body().byteStream();
             </a>
             <ul class="dropdown-menu">
             <li>
-                <a class="sidebar_archives-link" href="/archives/2020/12/">十二月 2020<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/11/">十一月 2018<span class="sidebar_archives-count">5</span></a>
+                <a class="sidebar_archives-link" href="/archives/2021/12/">十二月 2021<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/12/">十二月 2020<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/11/">十一月 2018<span class="sidebar_archives-count">5</span></a>
             </ul>
         </li>
         
@@ -1187,7 +1195,7 @@ response.body().byteStream();
         <li>
             <a href="/archives">
                 文章总数
-                <span class="sidebar-badge">7</span>
+                <span class="sidebar-badge">8</span>
             </a>
         </li>
         
