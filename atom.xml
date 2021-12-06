@@ -47,9 +47,9 @@
     <link href="https://blog.popperevan.work/posts/d717c770/"/>
     <id>https://blog.popperevan.work/posts/d717c770/</id>
     <published>2020-12-02T13:23:55.000Z</published>
-    <updated>2021-12-02T13:45:48.508Z</updated>
+    <updated>2021-12-06T15:56:39.105Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="本系列文章介绍RxJava库在Android上的使用和源码分析。"><a href="#本系列文章介绍RxJava库在Android上的使用和源码分析。" class="headerlink" title="本系列文章介绍RxJava库在Android上的使用和源码分析。"></a>本系列文章介绍RxJava库在Android上的使用和源码分析。</h1><h1 id="本文只要介绍RxJava库在Android上的基本使用。"><a href="#本文只要介绍RxJava库在Android上的基本使用。" class="headerlink" title="本文只要介绍RxJava库在Android上的基本使用。"></a>本文只要介绍RxJava库在Android上的基本使用。</h1><span id="more"></span><h1 id="什么是RxJava"><a href="#什么是RxJava" class="headerlink" title="什么是RxJava"></a>什么是RxJava</h1><p>​    RxJava的官方介绍：</p><pre><code>a library for composing asynchronous and event-based programs using observable sequences for the Java VM</code></pre><p>​    中文意思就是:一个<strong>库，</strong>一个什么样子的库呢。在<code>Java VM</code>上使用可观测的序列来组成<strong>异步的</strong>、<strong>基于事件</strong>的程序的库。那么为什么叫<code>Rx</code>？<code>Rx</code>全称为<code>ReactiveX(Reactive Extensions)</code>。什么又叫做<code>Rx</code>,<br>这是一个使用<strong>可观察数据流</strong>进行<strong>异步编程</strong>的<strong>编程接口</strong>，是一个编程模型，目标是提供一致的编程接口，帮助开发者更方便的进行异步和基于事件的程序。</p><p>​    <a href="https://github.com/ReactiveX/RxJava">RxJava项目地址</a></p><center>-----本文结束啦感谢您的阅读-----]]></content>
+    <content type="html"><![CDATA[<h1 id="本系列文章介绍RxJava库在Android上的使用和源码分析。"><a href="#本系列文章介绍RxJava库在Android上的使用和源码分析。" class="headerlink" title="本系列文章介绍RxJava库在Android上的使用和源码分析。"></a>本系列文章介绍RxJava库在Android上的使用和源码分析。</h1><h1 id="本文只要介绍RxJava库在Android上的基本使用。"><a href="#本文只要介绍RxJava库在Android上的基本使用。" class="headerlink" title="本文只要介绍RxJava库在Android上的基本使用。"></a>本文只要介绍RxJava库在Android上的基本使用。</h1><span id="more"></span><h1 id="什么是RxJava"><a href="#什么是RxJava" class="headerlink" title="什么是RxJava"></a>什么是RxJava</h1><p>​    RxJava的官方介绍：</p><pre><code>a library for composing asynchronous and event-based programs using observable sequences for the Java VM</code></pre><p>​    中文意思就是:一个<strong>库，</strong>一个什么样子的库呢。在<code>Java VM</code>上使用可观测的序列来组成<strong>异步的</strong>、<strong>基于事件</strong>的程序的库。那么为什么叫<code>Rx</code>？<code>Rx</code>全称为<code>ReactiveX(Reactive Extensions)</code>。什么又叫做<code>Rx</code>,<br>这是一个使用<strong>可观察数据流</strong>进行<strong>异步编程</strong>的<strong>编程接口</strong>，是一个编程模型，目标是提供一致的编程接口，帮助开发者更方便的进行异步和基于事件的程序。</p><p>​    <a href="https://github.com/ReactiveX/RxJava">RxJava项目地址</a></p><h2 id="优点："><a href="#优点：" class="headerlink" title="优点："></a>优点：</h2><ol><li>支持RESTful API设计风格</li><li>通过注解配置请求：请求方法，请求头，请求参数，返回值等</li><li>搭配多种Converter来解析数据和序列化：Gson，Jackson，Protobuff，fastjson等</li><li>支持RxJava</li></ol><center>-----本文结束啦感谢您的阅读-----]]></content>
     
     
     <summary type="html">&lt;h1 id=&quot;本系列文章介绍RxJava库在Android上的使用和源码分析。&quot;&gt;&lt;a href=&quot;#本系列文章介绍RxJava库在Android上的使用和源码分析。&quot; class=&quot;headerlink&quot; title=&quot;本系列文章介绍RxJava库在Android上的使用和源码分析。&quot;&gt;&lt;/a&gt;本系列文章介绍RxJava库在Android上的使用和源码分析。&lt;/h1&gt;&lt;h1 id=&quot;本文只要介绍RxJava库在Android上的基本使用。&quot;&gt;&lt;a href=&quot;#本文只要介绍RxJava库在Android上的基本使用。&quot; class=&quot;headerlink&quot; title=&quot;本文只要介绍RxJava库在Android上的基本使用。&quot;&gt;&lt;/a&gt;本文只要介绍RxJava库在Android上的基本使用。&lt;/h1&gt;</summary>
@@ -60,30 +60,6 @@
     
     
     <category term="android" scheme="https://blog.popperevan.work/tags/android/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Markdown扩展语法</title>
-    <link href="https://blog.popperevan.work/posts/c677b245/"/>
-    <id>https://blog.popperevan.work/posts/c677b245/</id>
-    <published>2018-11-22T16:00:00.000Z</published>
-    <updated>2021-12-02T14:16:21.426Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="Markdown扩展语法"><a href="#Markdown扩展语法" class="headerlink" title="Markdown扩展语法"></a>Markdown扩展语法</h1><p>在<a href="https://blog.popperevan.work/posts/5d36ff15/">上一篇文章</a>,记录了Markdown的基本语法，本文记录下我们常用的扩展语法。</p><h2 id="删除线"><a href="#删除线" class="headerlink" title="删除线"></a>删除线</h2><p>当需要表示废弃的文字时或过时的方法，就需要删除线。加删除线的文本，在编译为 Html 后会被<code>&lt;s&gt;</code>和<code>&lt;/s&gt;</code>标签包围。<br>删除线的表现方法是：文字前后用<code>~~</code>包围。切记是半角<code>~</code>而非全角<code>～</code>，注意全角和半角的区别。</p><pre><code>~~要删除的方法~~</code></pre><p>效果：<del>要删除的文字</del></p><h2 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h2><p>我是锚点</p><h3 id="单元格和表头"><a href="#单元格和表头" class="headerlink" title="单元格和表头"></a>单元格和表头</h3><p>使用 | 来分隔不同的单元格，使用 - 来分隔表头和其他行：</p><pre><code>姓名  | 代表作---- | ---苏轼  | 水调歌头纳兰性德 | 饮水词李太白 | 梦游天姥吟留别</code></pre><table><thead><tr><th>姓名</th><th>代表作</th></tr></thead><tbody><tr><td>苏轼</td><td>水调歌头</td></tr><tr><td>纳兰性德</td><td>饮水词</td></tr><tr><td>李太白</td><td>梦游天姥吟留别</td></tr></tbody></table><p>为了美观，可以使用空格对齐不同行的单元格，并在左右两侧都使用 | 来标记单元格边界：</p><pre><code>| 姓名     |        代表作 || ----    | ------------ || 苏轼     |      水调歌头 || 纳兰性德 |        饮水词 || 李太白   | 梦游天姥吟留别 |</code></pre><table><thead><tr><th>姓名</th><th>代表作</th></tr></thead><tbody><tr><td>苏轼</td><td>水调歌头</td></tr><tr><td>纳兰性德</td><td>饮水词</td></tr><tr><td>李太白</td><td>梦游天姥吟留别</td></tr></tbody></table><h3 id="对齐"><a href="#对齐" class="headerlink" title="对齐"></a>对齐</h3><p>在表头下方的分隔线标记中加入 :，即可标记下方单元格内容的对齐方式：</p><ul><li><code>:---</code> 代表左对齐</li><li><code>:--:</code> 代表居中对齐</li><li><code>---:</code> 代表右对齐</li></ul><pre><code>| left    |      center | right   || :---    |      :--:   | ---:    || 苏轼    |       李太白  | 纳兰性德 || 水调歌头 | 梦游天姥吟留别 |   饮水词 |</code></pre><table><thead><tr><th align="left">left</th><th align="center">center</th><th align="right">right</th></tr></thead><tbody><tr><td align="left">苏轼</td><td align="center">李太白</td><td align="right">纳兰性德</td></tr><tr><td align="left">水调歌头</td><td align="center">梦游天姥吟留别</td><td align="right">饮水词</td></tr></tbody></table><blockquote><p>如果不使用对齐标记，单元格中的内容默认左对齐；表头单元格中的内容会一直居中对齐（不同的实现可能会有不同表现）。</p></blockquote><h3 id="表格和基础语法结合"><a href="#表格和基础语法结合" class="headerlink" title="表格和基础语法结合"></a>表格和基础语法结合</h3><pre><code>name | link---  | ---*百度* | [百度](www.baidu.com)**谷歌** | [谷歌](www.google.com)    </code></pre><table><thead><tr><th>name</th><th>link</th></tr></thead><tbody><tr><td><em>百度</em></td><td><a href="www.baidu.com">百度</a></td></tr><tr><td><strong>谷歌</strong></td><td><a href="www.google.com">谷歌</a></td></tr></tbody></table><h2 id="任务列表"><a href="#任务列表" class="headerlink" title="任务列表"></a>任务列表</h2><ul><li>尚未完成的任务，文本行以<code>-[ ]</code>开头</li><li>已经完成的任务，文本行以<code>-[x]</code>开头</li></ul><pre><code>- [ ] 尚未开始的任务- [x] 已经完成的任务</code></pre><ul><li> 尚未开始的任务</li><li> 已经完成的任务</li></ul><h2 id="锚"><a href="#锚" class="headerlink" title="锚"></a>锚</h2><p>　锚是一种特殊的链接，专门用以标志出可供跳转到位置。 　</p><blockquote><p>注意：由于标题可以折叠其下的内容，所以锚可能被它前面的标题折叠起来。此时锚是不起作用的。</p></blockquote><p>示例：在指定位置添加：</p><pre><code>&lt;a id=&quot;jump&quot;&gt;我是锚点&lt;/a&gt;</code></pre><p>然后此处添加：</p><pre><code>[跳转锚点](#jump)</code></pre><p><a href="#jump">跳转锚点</a></p><h2 id="代码高亮"><a href="#代码高亮" class="headerlink" title="代码高亮"></a>代码高亮</h2><p>格式为:<br>在代码块的符号后面直接加语言 如java</p><pre><code>window.addEventListener(&#39;load&#39;, function() &#123;  console.log(&#39;window loaded&#39;);&#125;);</code></pre><center>-----本文结束啦感谢您的阅读-----]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;Markdown扩展语法&quot;&gt;&lt;a href=&quot;#Markdown扩展语法&quot; class=&quot;headerlink&quot; title=&quot;Markdown扩展语法&quot;&gt;&lt;/a&gt;Markdown扩展语法&lt;/h1&gt;&lt;p&gt;在&lt;a href=&quot;https://blog.poppere</summary>
-      
-    
-    
-    
-    <category term="工具" scheme="https://blog.popperevan.work/categories/%E5%B7%A5%E5%85%B7/"/>
-    
-    
-    <category term="markdown" scheme="https://blog.popperevan.work/tags/markdown/"/>
     
   </entry>
   
@@ -100,6 +76,30 @@
       
       
     <summary type="html">&lt;h1 id=&quot;Markdown基本语法&quot;&gt;&lt;a href=&quot;#Markdown基本语法&quot; class=&quot;headerlink&quot; title=&quot;Markdown基本语法&quot;&gt;&lt;/a&gt;Markdown基本语法&lt;/h1&gt;&lt;h1 id=&quot;Markdown简介&quot;&gt;&lt;a href=&quot;#Mar</summary>
+      
+    
+    
+    
+    <category term="工具" scheme="https://blog.popperevan.work/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+    <category term="markdown" scheme="https://blog.popperevan.work/tags/markdown/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Markdown扩展语法</title>
+    <link href="https://blog.popperevan.work/posts/c677b245/"/>
+    <id>https://blog.popperevan.work/posts/c677b245/</id>
+    <published>2018-11-22T16:00:00.000Z</published>
+    <updated>2021-12-02T14:16:21.426Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Markdown扩展语法"><a href="#Markdown扩展语法" class="headerlink" title="Markdown扩展语法"></a>Markdown扩展语法</h1><p>在<a href="https://blog.popperevan.work/posts/5d36ff15/">上一篇文章</a>,记录了Markdown的基本语法，本文记录下我们常用的扩展语法。</p><h2 id="删除线"><a href="#删除线" class="headerlink" title="删除线"></a>删除线</h2><p>当需要表示废弃的文字时或过时的方法，就需要删除线。加删除线的文本，在编译为 Html 后会被<code>&lt;s&gt;</code>和<code>&lt;/s&gt;</code>标签包围。<br>删除线的表现方法是：文字前后用<code>~~</code>包围。切记是半角<code>~</code>而非全角<code>～</code>，注意全角和半角的区别。</p><pre><code>~~要删除的方法~~</code></pre><p>效果：<del>要删除的文字</del></p><h2 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h2><p>我是锚点</p><h3 id="单元格和表头"><a href="#单元格和表头" class="headerlink" title="单元格和表头"></a>单元格和表头</h3><p>使用 | 来分隔不同的单元格，使用 - 来分隔表头和其他行：</p><pre><code>姓名  | 代表作---- | ---苏轼  | 水调歌头纳兰性德 | 饮水词李太白 | 梦游天姥吟留别</code></pre><table><thead><tr><th>姓名</th><th>代表作</th></tr></thead><tbody><tr><td>苏轼</td><td>水调歌头</td></tr><tr><td>纳兰性德</td><td>饮水词</td></tr><tr><td>李太白</td><td>梦游天姥吟留别</td></tr></tbody></table><p>为了美观，可以使用空格对齐不同行的单元格，并在左右两侧都使用 | 来标记单元格边界：</p><pre><code>| 姓名     |        代表作 || ----    | ------------ || 苏轼     |      水调歌头 || 纳兰性德 |        饮水词 || 李太白   | 梦游天姥吟留别 |</code></pre><table><thead><tr><th>姓名</th><th>代表作</th></tr></thead><tbody><tr><td>苏轼</td><td>水调歌头</td></tr><tr><td>纳兰性德</td><td>饮水词</td></tr><tr><td>李太白</td><td>梦游天姥吟留别</td></tr></tbody></table><h3 id="对齐"><a href="#对齐" class="headerlink" title="对齐"></a>对齐</h3><p>在表头下方的分隔线标记中加入 :，即可标记下方单元格内容的对齐方式：</p><ul><li><code>:---</code> 代表左对齐</li><li><code>:--:</code> 代表居中对齐</li><li><code>---:</code> 代表右对齐</li></ul><pre><code>| left    |      center | right   || :---    |      :--:   | ---:    || 苏轼    |       李太白  | 纳兰性德 || 水调歌头 | 梦游天姥吟留别 |   饮水词 |</code></pre><table><thead><tr><th align="left">left</th><th align="center">center</th><th align="right">right</th></tr></thead><tbody><tr><td align="left">苏轼</td><td align="center">李太白</td><td align="right">纳兰性德</td></tr><tr><td align="left">水调歌头</td><td align="center">梦游天姥吟留别</td><td align="right">饮水词</td></tr></tbody></table><blockquote><p>如果不使用对齐标记，单元格中的内容默认左对齐；表头单元格中的内容会一直居中对齐（不同的实现可能会有不同表现）。</p></blockquote><h3 id="表格和基础语法结合"><a href="#表格和基础语法结合" class="headerlink" title="表格和基础语法结合"></a>表格和基础语法结合</h3><pre><code>name | link---  | ---*百度* | [百度](www.baidu.com)**谷歌** | [谷歌](www.google.com)    </code></pre><table><thead><tr><th>name</th><th>link</th></tr></thead><tbody><tr><td><em>百度</em></td><td><a href="www.baidu.com">百度</a></td></tr><tr><td><strong>谷歌</strong></td><td><a href="www.google.com">谷歌</a></td></tr></tbody></table><h2 id="任务列表"><a href="#任务列表" class="headerlink" title="任务列表"></a>任务列表</h2><ul><li>尚未完成的任务，文本行以<code>-[ ]</code>开头</li><li>已经完成的任务，文本行以<code>-[x]</code>开头</li></ul><pre><code>- [ ] 尚未开始的任务- [x] 已经完成的任务</code></pre><ul><li> 尚未开始的任务</li><li> 已经完成的任务</li></ul><h2 id="锚"><a href="#锚" class="headerlink" title="锚"></a>锚</h2><p>　锚是一种特殊的链接，专门用以标志出可供跳转到位置。 　</p><blockquote><p>注意：由于标题可以折叠其下的内容，所以锚可能被它前面的标题折叠起来。此时锚是不起作用的。</p></blockquote><p>示例：在指定位置添加：</p><pre><code>&lt;a id=&quot;jump&quot;&gt;我是锚点&lt;/a&gt;</code></pre><p>然后此处添加：</p><pre><code>[跳转锚点](#jump)</code></pre><p><a href="#jump">跳转锚点</a></p><h2 id="代码高亮"><a href="#代码高亮" class="headerlink" title="代码高亮"></a>代码高亮</h2><p>格式为:<br>在代码块的符号后面直接加语言 如java</p><pre><code>window.addEventListener(&#39;load&#39;, function() &#123;  console.log(&#39;window loaded&#39;);&#125;);</code></pre><center>-----本文结束啦感谢您的阅读-----]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;Markdown扩展语法&quot;&gt;&lt;a href=&quot;#Markdown扩展语法&quot; class=&quot;headerlink&quot; title=&quot;Markdown扩展语法&quot;&gt;&lt;/a&gt;Markdown扩展语法&lt;/h1&gt;&lt;p&gt;在&lt;a href=&quot;https://blog.poppere</summary>
       
     
     
@@ -135,27 +135,6 @@
   </entry>
   
   <entry>
-    <title>iTerm2配置和美化</title>
-    <link href="https://blog.popperevan.work/posts/d2a06635/"/>
-    <id>https://blog.popperevan.work/posts/d2a06635/</id>
-    <published>2018-11-19T16:00:00.000Z</published>
-    <updated>2021-12-02T14:04:40.808Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="本文只要介绍iTerm2在mac-OS上的配置和美化。"><a href="#本文只要介绍iTerm2在mac-OS上的配置和美化。" class="headerlink" title="本文只要介绍iTerm2在mac OS上的配置和美化。"></a>本文只要介绍iTerm2在mac OS上的配置和美化。</h1><span id="more"></span><h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p><code>iTerm2</code>是<code>macOS</code>平台上终端的替代方案，功能也更强大</p><h3 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h3><p><a href="https://iterm2.com/">iTerm2官网</a></p><h3 id="设为默认"><a href="#设为默认" class="headerlink" title="设为默认"></a>设为默认</h3><pre><code>iTerm2 -&gt; Make ITerm2 Default Term</code></pre><h3 id="设置透明度"><a href="#设置透明度" class="headerlink" title="设置透明度"></a>设置透明度</h3><pre><code>iTerm -&gt; Preferences -&gt; Profiles -&gt; window -&gt; Transparency</code></pre><h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><ol><li><p>设置默认shell为zsh</p><ul><li><p>查看系统所有shell列表</p><pre><code>cat /etc/shells</code></pre></li><li><p>查看zsh版本</p><pre><code>zsh --version</code></pre></li><li><p>设置默认 shell 为 zsh，它功能比较多，会好使一些。</p><pre><code>chsh -s /bin/zsh</code></pre></li></ul></li><li><p>安装oh-my-zsh</p><ul><li><p>什么是oh-my-zsh</p><blockquote><p>oh-my-zsh 是一款社区驱动的命令行工具，它基于 zsh 命令行，提供了主题配置，插件机制，大大提高了可玩（用）性。</p></blockquote></li><li><p>下载地址</p><p><a href="https://github.com/ohmyzsh/ohmyzsh">oh-my-zsh</a></p></li><li><p>安装</p><p><strong>以下脚本执行一个</strong>：</p><ul><li><p>wget：</p><pre><code>export REMOTE=https://gitee.com/imirror/ohmyzsh.gitsh -c &quot;$(wget -O- https://cdn.jsdelivr.net/gh/ohmyzsh/ohmyzsh/tools/install.sh)&quot;</code></pre></li><li><p>fetch：</p><pre><code>export REMOTE=https://gitee.com/imirror/ohmyzsh.gitsh -c &quot;$(fetch -o - https://cdn.jsdelivr.net/gh/ohmyzsh/ohmyzsh/tools/install.sh)&quot;</code></pre></li><li><p>curl：</p></li></ul><pre><code>export REMOTE=https://gitee.com/imirror/ohmyzsh.gitsh -c &quot;$(curl -fsSL https://cdn.jsdelivr.net/gh/ohmyzsh/ohmyzsh/tools/install.sh)&quot;</code></pre></li></ul></li><li><p>配置zsh主题</p><ul><li><p>官方主题</p><p><a href="https://github.com/ohmyzsh/ohmyzsh/wiki/Themes">主题</a></p></li><li><p>vim打开<code>~/.zshrc</code>文件</p><pre><code>vim ~/.zshrc</code></pre></li><li><p>更改ZSH_THEME字段为你所选的主题名称</p></li></ul></li><li><p>更改字体</p></li></ol><pre><code class="iTerm">iTerm -&gt; Preferences -&gt; Profiles -&gt; Text</code></pre><ol start="5"><li>功能增强</li></ol><ul><li>5.1 命令自动补全功能</li></ul><p>​    克隆代码到<code>$ZSH_CUSTOM/plugins</code>（默认位于<code>~/.oh-my-zsh/custom/plugins</code>）</p><pre><code>git clone https://gitee.com/imirror/zsh-autosuggestions.git $&#123;ZSH_CUSTOM:-~/.oh-my-zsh/custom&#125;/plugins/zsh-autosuggestions</code></pre><ul><li>5.1.1执行zshrc文件</li></ul><pre><code>source ~/.zshrc</code></pre><ul><li>5.1.2配置插件</li></ul><p>打开<code>~/.zshrc</code>，找到<code>plugins</code>，追加<code>zsh-autosuggestions</code>。</p><ul><li><p>5.2 语法高亮</p></li><li><p>5.21.克隆代码到<code>$ZSH_CUSTOM/plugins</code>（默认位于<code>~/.oh-my-zsh/custom/plugins</code>）</p></li></ul><pre><code>git clone https://gitee.com/imirror/zsh-syntax-highlighting.git $&#123;ZSH_CUSTOM:-~/.oh-my-zsh/custom&#125;/plugins/zsh-syntax-highlighting</code></pre><ul><li>5.2.2 配置启用插件</li></ul><p>打开<code>~/.zshrc</code>，找到<code>plugins</code>，追加<code>zsh-autosuggestions</code>。</p><ul><li>5.2.3执行zshrc文件</li></ul><pre><code>source ~/.zshrc</code></pre>]]></content>
-    
-    
-    <summary type="html">&lt;h1 id=&quot;本文只要介绍iTerm2在mac-OS上的配置和美化。&quot;&gt;&lt;a href=&quot;#本文只要介绍iTerm2在mac-OS上的配置和美化。&quot; class=&quot;headerlink&quot; title=&quot;本文只要介绍iTerm2在mac OS上的配置和美化。&quot;&gt;&lt;/a&gt;本文只要介绍iTerm2在mac OS上的配置和美化。&lt;/h1&gt;</summary>
-    
-    
-    
-    <category term="工具" scheme="https://blog.popperevan.work/categories/%E5%B7%A5%E5%85%B7/"/>
-    
-    
-    <category term="itrem2 zsh" scheme="https://blog.popperevan.work/tags/itrem2-zsh/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Typora常用快捷键</title>
     <link href="https://blog.popperevan.work/posts/12a67745/"/>
     <id>https://blog.popperevan.work/posts/12a67745/</id>
@@ -173,6 +152,27 @@
     
     
     <category term="typora markdown" scheme="https://blog.popperevan.work/tags/typora-markdown/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>iTerm2配置和美化</title>
+    <link href="https://blog.popperevan.work/posts/d2a06635/"/>
+    <id>https://blog.popperevan.work/posts/d2a06635/</id>
+    <published>2018-11-19T16:00:00.000Z</published>
+    <updated>2021-12-02T14:04:40.808Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="本文只要介绍iTerm2在mac-OS上的配置和美化。"><a href="#本文只要介绍iTerm2在mac-OS上的配置和美化。" class="headerlink" title="本文只要介绍iTerm2在mac OS上的配置和美化。"></a>本文只要介绍iTerm2在mac OS上的配置和美化。</h1><span id="more"></span><h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p><code>iTerm2</code>是<code>macOS</code>平台上终端的替代方案，功能也更强大</p><h3 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h3><p><a href="https://iterm2.com/">iTerm2官网</a></p><h3 id="设为默认"><a href="#设为默认" class="headerlink" title="设为默认"></a>设为默认</h3><pre><code>iTerm2 -&gt; Make ITerm2 Default Term</code></pre><h3 id="设置透明度"><a href="#设置透明度" class="headerlink" title="设置透明度"></a>设置透明度</h3><pre><code>iTerm -&gt; Preferences -&gt; Profiles -&gt; window -&gt; Transparency</code></pre><h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><ol><li><p>设置默认shell为zsh</p><ul><li><p>查看系统所有shell列表</p><pre><code>cat /etc/shells</code></pre></li><li><p>查看zsh版本</p><pre><code>zsh --version</code></pre></li><li><p>设置默认 shell 为 zsh，它功能比较多，会好使一些。</p><pre><code>chsh -s /bin/zsh</code></pre></li></ul></li><li><p>安装oh-my-zsh</p><ul><li><p>什么是oh-my-zsh</p><blockquote><p>oh-my-zsh 是一款社区驱动的命令行工具，它基于 zsh 命令行，提供了主题配置，插件机制，大大提高了可玩（用）性。</p></blockquote></li><li><p>下载地址</p><p><a href="https://github.com/ohmyzsh/ohmyzsh">oh-my-zsh</a></p></li><li><p>安装</p><p><strong>以下脚本执行一个</strong>：</p><ul><li><p>wget：</p><pre><code>export REMOTE=https://gitee.com/imirror/ohmyzsh.gitsh -c &quot;$(wget -O- https://cdn.jsdelivr.net/gh/ohmyzsh/ohmyzsh/tools/install.sh)&quot;</code></pre></li><li><p>fetch：</p><pre><code>export REMOTE=https://gitee.com/imirror/ohmyzsh.gitsh -c &quot;$(fetch -o - https://cdn.jsdelivr.net/gh/ohmyzsh/ohmyzsh/tools/install.sh)&quot;</code></pre></li><li><p>curl：</p></li></ul><pre><code>export REMOTE=https://gitee.com/imirror/ohmyzsh.gitsh -c &quot;$(curl -fsSL https://cdn.jsdelivr.net/gh/ohmyzsh/ohmyzsh/tools/install.sh)&quot;</code></pre></li></ul></li><li><p>配置zsh主题</p><ul><li><p>官方主题</p><p><a href="https://github.com/ohmyzsh/ohmyzsh/wiki/Themes">主题</a></p></li><li><p>vim打开<code>~/.zshrc</code>文件</p><pre><code>vim ~/.zshrc</code></pre></li><li><p>更改ZSH_THEME字段为你所选的主题名称</p></li></ul></li><li><p>更改字体</p></li></ol><pre><code class="iTerm">iTerm -&gt; Preferences -&gt; Profiles -&gt; Text</code></pre><ol start="5"><li>功能增强</li></ol><ul><li>5.1 命令自动补全功能</li></ul><p>​    克隆代码到<code>$ZSH_CUSTOM/plugins</code>（默认位于<code>~/.oh-my-zsh/custom/plugins</code>）</p><pre><code>git clone https://gitee.com/imirror/zsh-autosuggestions.git $&#123;ZSH_CUSTOM:-~/.oh-my-zsh/custom&#125;/plugins/zsh-autosuggestions</code></pre><ul><li>5.1.1执行zshrc文件</li></ul><pre><code>source ~/.zshrc</code></pre><ul><li>5.1.2配置插件</li></ul><p>打开<code>~/.zshrc</code>，找到<code>plugins</code>，追加<code>zsh-autosuggestions</code>。</p><ul><li><p>5.2 语法高亮</p></li><li><p>5.21.克隆代码到<code>$ZSH_CUSTOM/plugins</code>（默认位于<code>~/.oh-my-zsh/custom/plugins</code>）</p></li></ul><pre><code>git clone https://gitee.com/imirror/zsh-syntax-highlighting.git $&#123;ZSH_CUSTOM:-~/.oh-my-zsh/custom&#125;/plugins/zsh-syntax-highlighting</code></pre><ul><li>5.2.2 配置启用插件</li></ul><p>打开<code>~/.zshrc</code>，找到<code>plugins</code>，追加<code>zsh-autosuggestions</code>。</p><ul><li>5.2.3执行zshrc文件</li></ul><pre><code>source ~/.zshrc</code></pre>]]></content>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;本文只要介绍iTerm2在mac-OS上的配置和美化。&quot;&gt;&lt;a href=&quot;#本文只要介绍iTerm2在mac-OS上的配置和美化。&quot; class=&quot;headerlink&quot; title=&quot;本文只要介绍iTerm2在mac OS上的配置和美化。&quot;&gt;&lt;/a&gt;本文只要介绍iTerm2在mac OS上的配置和美化。&lt;/h1&gt;</summary>
+    
+    
+    
+    <category term="工具" scheme="https://blog.popperevan.work/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+    <category term="itrem2 zsh" scheme="https://blog.popperevan.work/tags/itrem2-zsh/"/>
     
   </entry>
   
