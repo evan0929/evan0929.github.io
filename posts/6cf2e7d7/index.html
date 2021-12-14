@@ -52,7 +52,7 @@
     
     <title>
         
-            Retrofit基本使用 | 
+            Retrofit源码解析 | 
         
         Evan`s Blog
     </title>
@@ -62,7 +62,7 @@
     <link rel="icon" href="/img/avatar.jpeg">
 
     <meta name="format-detection" content="telephone=no"/>
-    <meta name="description" itemprop="description" content="">
+    <meta name="description" itemprop="description" content="在上一篇文章详细讲解了Retrofit的基本使用，本篇文章从源码角度深度解析下Retrofit的具体实现过程。">
     <meta name="keywords" content="android blog,android,Retrofit,网络">
     <meta name="theme-color" content="#0097A7">
 
@@ -219,7 +219,7 @@
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="Evan`s Blog">
-    <meta name="msapplication-starturl" content="https://blog.popperevan.work/posts/4bd912da/">
+    <meta name="msapplication-starturl" content="https://blog.popperevan.work/posts/6cf2e7d7/">
     <meta name="msapplication-navbutton-color" content="#0097A7">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="Evan`s Blog">
@@ -238,16 +238,16 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="https://blog.popperevan.work/posts/4bd912da/">
+    <meta property="og:url" content="https://blog.popperevan.work/posts/6cf2e7d7/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="Retrofit基本使用 | Evan`s Blog">
+    <meta property="og:title" content="Retrofit源码解析 | Evan`s Blog">
     <meta property="og:image" content="/img/avatar.jpeg">
-    <meta property="og:description" content="">
+    <meta property="og:description" content="在上一篇文章详细讲解了Retrofit的基本使用，本篇文章从源码角度深度解析下Retrofit的具体实现过程。">
     <meta property="og:article:tag" content="android"> <meta property="og:article:tag" content="Retrofit"> <meta property="og:article:tag" content="网络"> 
 
     
-        <meta property="article:published_time" content="Wed Dec 02 2020 21:50:31 GMT+0800">
-        <meta property="article:modified_time" content="Tue Dec 14 2021 23:56:59 GMT+0800">
+        <meta property="article:published_time" content="Thu Dec 03 2020 21:23:55 GMT+0800">
+        <meta property="article:modified_time" content="Wed Dec 15 2021 01:32:29 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -255,7 +255,7 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="https://blog.popperevan.work/posts/4bd912da/index.html" />
+        <link rel="canonical" href="https://blog.popperevan.work/posts/6cf2e7d7/index.html" />
     
 
     <!-- Structured-data for SEO -->
@@ -267,10 +267,10 @@
 {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "mainEntityOfPage": "https://blog.popperevan.work/posts/4bd912da/index.html",
-    "headline": "Retrofit基本使用",
-    "datePublished": "Wed Dec 02 2020 21:50:31 GMT+0800",
-    "dateModified": "Tue Dec 14 2021 23:56:59 GMT+0800",
+    "mainEntityOfPage": "https://blog.popperevan.work/posts/6cf2e7d7/index.html",
+    "headline": "Retrofit源码解析",
+    "datePublished": "Thu Dec 03 2020 21:23:55 GMT+0800",
+    "dateModified": "Wed Dec 15 2021 01:32:29 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "Evan",
@@ -289,7 +289,7 @@
         }
     },
     "keywords": ",android,Retrofit,网络android blog",
-    "description": "",
+    "description": "在上一篇文章详细讲解了Retrofit的基本使用，本篇文章从源码角度深度解析下Retrofit的具体实现过程。",
 }
 </script>
 
@@ -371,7 +371,7 @@
     </button>
 
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#%E5%9C%A8%E4%B9%8B%E5%89%8D%E7%9A%84%E6%96%87%E7%AB%A0%E4%BB%8B%E7%BB%8D%E4%BA%86OkHttp%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8%E5%92%8C%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90%EF%BC%8C%E6%9C%AC%E6%96%87%E5%BC%80%E5%A7%8B%E4%BB%8B%E7%BB%8DRetrofit%E7%9A%84%E4%BD%BF%E7%94%A8"><span class="post-toc-number">1.</span> <span class="post-toc-text">在之前的文章介绍了OkHttp的基本使用和源码解析，本文开始介绍Retrofit的使用</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E7%AE%80%E4%BB%8B"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">简介</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E4%BC%98%E5%8A%BF"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">优势</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E4%BD%BF%E7%94%A8"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">使用</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%9F%BA%E6%9C%AC%E6%B3%A8%E8%A7%A3"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">基本注解</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E8%AF%B7%E6%B1%82%E6%96%B9%E6%B3%95"><span class="post-toc-number">1.4.1.</span> <span class="post-toc-text">请求方法</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E6%A0%87%E8%AE%B0%E7%B1%BB"><span class="post-toc-number">1.4.2.</span> <span class="post-toc-text">标记类</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82%E5%8F%82%E6%95%B0"><span class="post-toc-number">1.4.3.</span> <span class="post-toc-text">网络请求参数</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E6%95%B0%E6%8D%AE%E8%A7%A3%E6%9E%90%E5%99%A8%EF%BC%88Converter%EF%BC%89"><span class="post-toc-number">1.4.4.</span> <span class="post-toc-text">数据解析器（Converter）</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%8F%82%E8%80%83%E6%96%87%E7%AB%A0"><span class="post-toc-number">1.5.</span> <span class="post-toc-text">参考文章</span></a></li></ol></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#%E5%9C%A8%E4%B8%8A%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0%E8%AF%A6%E7%BB%86%E8%AE%B2%E8%A7%A3%E4%BA%86Retrofit%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8%EF%BC%8C%E6%9C%AC%E7%AF%87%E6%96%87%E7%AB%A0%E4%BB%8E%E6%BA%90%E7%A0%81%E8%A7%92%E5%BA%A6%E6%B7%B1%E5%BA%A6%E8%A7%A3%E6%9E%90%E4%B8%8BRetrofit%E7%9A%84%E5%85%B7%E4%BD%93%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B%E3%80%82"><span class="post-toc-number">1.</span> <span class="post-toc-text">在上一篇文章详细讲解了Retrofit的基本使用，本篇文章从源码角度深度解析下Retrofit的具体实现过程。</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E9%A6%96%E5%85%88%E6%88%91%E4%BB%AC%E5%85%88%E7%9C%8B%E4%B8%8B%E5%AE%9E%E7%8E%B0%E8%AF%B7%E6%B1%82%E7%94%A8%E5%88%B0%E7%9A%84%E5%87%A0%E4%B8%AA%E7%B1%BB%E7%9A%84%E5%90%AB%E4%B9%89"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">首先我们先看下实现请求用到的几个类的含义</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E8%AF%B7%E6%B1%82%E5%85%A5%E5%8F%A3"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">请求入口</span></a></li></ol></li></ol>
     </ul>
     
 
@@ -403,7 +403,7 @@
         
     
             <p class="article-headline-p">
-                Retrofit基本使用
+                Retrofit源码解析
             </p>
         </div>
 
@@ -422,7 +422,7 @@
     <!-- Author Name & Date -->
     <div>
         <strong>Evan</strong>
-        <span>12月 02, 2020</span>
+        <span>12月 03, 2020</span>
     </div>
 
     <div class="section-spacer"></div>
@@ -474,7 +474,7 @@
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Retrofit基本使用&url=https://blog.popperevan.work/posts/4bd912da/index.html&pic=https://blog.popperevan.work/img/avatar.jpeg&searchPic=false&style=simple" rel="external nofollow noreferrer" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Retrofit源码解析&url=https://blog.popperevan.work/posts/6cf2e7d7/index.html&pic=https://blog.popperevan.work/img/avatar.jpeg&searchPic=false&style=simple" rel="external nofollow noreferrer" target="_blank">
             <li class="mdl-menu__item">
                 分享到微博
             </li>
@@ -483,7 +483,7 @@
 
     <!-- Share Twitter -->
     
-        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=Retrofit基本使用&url=https://blog.popperevan.work/posts/4bd912da/index.html&via=Evan" rel="external nofollow noreferrer" target="_blank">
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=Retrofit源码解析&url=https://blog.popperevan.work/posts/6cf2e7d7/index.html&via=Evan" rel="external nofollow noreferrer" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Twitter
             </li>
@@ -492,7 +492,7 @@
 
     <!-- Share Facebook -->
     
-        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=https://blog.popperevan.work/posts/4bd912da/index.html" rel="external nofollow noreferrer" target="_blank">
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=https://blog.popperevan.work/posts/6cf2e7d7/index.html" rel="external nofollow noreferrer" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Facebook
             </li>
@@ -501,7 +501,7 @@
 
     <!-- Share Google+ -->
     
-        <a class="post_share-link" href="https://plus.google.com/share?url=https://blog.popperevan.work/posts/4bd912da/index.html" rel="external nofollow noreferrer" target="_blank">
+        <a class="post_share-link" href="https://plus.google.com/share?url=https://blog.popperevan.work/posts/6cf2e7d7/index.html" rel="external nofollow noreferrer" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Google+
             </li>
@@ -516,7 +516,7 @@
 
     <!-- Share Telegram -->
     
-        <a class="post_share-link" href="https://telegram.me/share/url?url=https://blog.popperevan.work/posts/4bd912da/index.html&text=Retrofit基本使用" rel="external nofollow noreferrer" target="_blank">
+        <a class="post_share-link" href="https://telegram.me/share/url?url=https://blog.popperevan.work/posts/6cf2e7d7/index.html&text=Retrofit源码解析" rel="external nofollow noreferrer" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Telegram
             </li>
@@ -532,291 +532,262 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <h1 id="在之前的文章介绍了OkHttp的基本使用和源码解析，本文开始介绍Retrofit的使用"><a href="#在之前的文章介绍了OkHttp的基本使用和源码解析，本文开始介绍Retrofit的使用" class="headerlink" title="在之前的文章介绍了OkHttp的基本使用和源码解析，本文开始介绍Retrofit的使用"></a>在之前的文章介绍了OkHttp的<a href="https://blog.popperevan.work/posts/88a80a38/">基本使用</a>和<a href="https://blog.popperevan.work/posts/ff8004af/">源码解析</a>，本文开始介绍Retrofit的使用</h1><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>官方的介绍：A Type-safe HTTP client for Android and Java</p>
-<p>其实就是Square公司基于OkHttp封装的针对Android和Java使用的一个类型安全的http网络请求库 。</p>
-<blockquote>
-<p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://square.github.io/retrofit/">官网地址</a></p>
-<p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/square/retrofit">github地址</a></p>
-</blockquote>
-<h2 id="优势"><a href="#优势" class="headerlink" title="优势"></a>优势</h2><ol>
-<li>支持RESTful API设计风格</li>
-<li>通过注解配置请求：请求方法，请求头，请求参数，返回值等</li>
-<li>搭配多种Converter来解析数据和序列化：Gson，Jackson，Protobuff，fastjson等</li>
-<li>支持RxJava</li>
-</ol>
-<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><ol>
-<li>添加依赖</li>
-</ol>
-<pre><code class="java">implementation &#39;com.squareup.retrofit2:retrofit:2.9.0&#39;
-implementation &#39;com.squareup.retrofit2:converter-gson:2.9.0&#39; //json转换
-implementation &#39;com.squareup.retrofit2:converter-scalars:2.9.0&#39;//String 类型转换
-</code></pre>
-<ol start="2">
-<li>权限</li>
-</ol>
-<pre><code class="java">&lt;uses-permission android:name=&quot;android.permission.INTERNET&quot;/&gt; //网络
-&lt;uses-permission android:name=&quot;android.permission.WRITE_EXTERNAL_STORAGE&quot; /&gt; //写
-&lt;uses-permission android:name=&quot;android.permission.READ_EXTERNAL_STORAGE&quot; /&gt; //读
-</code></pre>
-<ol start="3">
-<li>网络请求接口</li>
-</ol>
-<pre><code class="java">public interface RetrofitService &#123;
+        <h1 id="在上一篇文章详细讲解了Retrofit的基本使用，本篇文章从源码角度深度解析下Retrofit的具体实现过程。"><a href="#在上一篇文章详细讲解了Retrofit的基本使用，本篇文章从源码角度深度解析下Retrofit的具体实现过程。" class="headerlink" title="在上一篇文章详细讲解了Retrofit的基本使用，本篇文章从源码角度深度解析下Retrofit的具体实现过程。"></a>在<a href="https://blog.popperevan.work/posts/4bd912da/">上一篇</a>文章详细讲解了Retrofit的基本使用，本篇文章从源码角度深度解析下Retrofit的具体实现过程。</h1><span id="more"></span>
 
-    @GET(&quot;userInfo&quot;)
-    Call&lt;BaseBean&lt;UserInfoBean&gt;&gt; getTest();
-
-    @GET()
-    Call&lt;BaseBean&lt;UserInfoBean&gt;&gt; getTest(@Url() String url);
-&#125;
-</code></pre>
-<blockquote>
-<p>Retrofit 将网络http请求抽象为Java接口的形式，通过注解的方式配置和描述请求参数。</p>
-</blockquote>
-<p>4.创建Retrofit实例</p>
-<pre><code class="java"> Retrofit retrofit=new Retrofit.Builder()
-            .baseUrl(baseUrl)
-            .addConverterFactory(GsonConverterFactory.create())
-            .build();
-</code></pre>
-<ol start="5">
-<li>绑定请求接口</li>
-</ol>
-<pre><code class="java">RetrofitService service=retrofit.create(RetrofitService.class);
-</code></pre>
-<ol start="6">
-<li>请求</li>
-</ol>
-<pre><code class="java">service.httpTest(&quot;test&quot;).enqueue(new Callback&lt;BaseBean&lt;UserInfoBean&gt;&gt;() &#123;
-            @Override
-            public void onResponse(Call&lt;BaseBean&lt;UserInfoBean&gt;&gt; call, Response&lt;BaseBean&lt;UserInfoBean&gt;&gt;                                                                                                 response) &#123;
-                Log.e(TAG, response.body().toString());
-            &#125;
-
-            @Override
-            public void onFailure(Call&lt;BaseBean&lt;UserInfoBean&gt;&gt; call, Throwable t) &#123;
-                Log.e(TAG, t.getMessage());
-            &#125;
-        &#125;);
-</code></pre>
-<p>7.请求结果在回调中获取和处理</p>
-<p><strong>以上是Retrofit的基本使用流程，下面给一个清晰的流程图</strong></p>
-<img src="https://cdn.jsdelivr.net/gh/evan0929/picture/img/%E6%88%AA%E5%B1%8F2021-12-14%20%E4%B8%8B%E5%8D%8810.30.26.png" alt="截屏2021-12-14 下午10.30.26" style="zoom:50%;" />
-
-<h2 id="基本注解"><a href="#基本注解" class="headerlink" title="基本注解"></a>基本注解</h2><p>注解分为三类：请求方法类注解、标记类注解、请求参数类注解</p>
-<h3 id="请求方法"><a href="#请求方法" class="headerlink" title="请求方法"></a>请求方法</h3><p>POST：用于在服务器新建资源，对应的资源操作是INSERT，非幂等且不安全</p>
-<p>DELETE：用于从服务器删除资源，对应的资源操作是DELETE，幂等且不安全</p>
-<p>PUT：用于从服务器更新资源，对应的资源操作是UPDATE，幂等且不安全</p>
-<p>GET：用于从服务器获取资源，对应的资源操作是SELECT，幂等且安全</p>
-<p><strong>详细说明</strong></p>
-<p>@GET </p>
-<blockquote>
-<p>用于发送一个GET请求，GET注解一般必须添加相对路径或绝对路径或者全路径,如果不想在GET注解后添加请求路径,则可以在方法的第一个参数中用@Url注解添加请求路径。</p>
-</blockquote>
-<p>两种调用方法：</p>
-<pre><code class="java">@GET(&quot;userInfo&quot;)
-Call&lt;BaseBean&lt;UserInfoBean&gt;&gt; getTest();
-@GET()
-Call&lt;BaseBean&lt;UserInfoBean&gt;&gt; getTest(@Url() String url);//这里传参的url为&quot;userInfo&quot;
-</code></pre>
-<p>@POST</p>
-<blockquote>
-<p>用于发送一个POST请求，POST注解一般必须添加相对路径或绝对路径或者全路径,如果不想在POST注解后添加请求路径,则可以在方法的第一个参数中用@Url注解添加请求路径。</p>
-</blockquote>
-<p>两种调用方法：</p>
-<pre><code class="java">@POST(&quot;user_info&quot;)
-Call&lt;BaseBean&lt;UserInfoBean&gt;&gt; postTest();
-
-@POST()
-Call&lt;BaseBean&lt;UserInfoBean&gt;&gt; postTest(@Url() String url);//这里传参的url为&quot;user_info&quot;
-</code></pre>
-<p> @PUT</p>
-<blockquote>
-<p>用于发送一个PUT请求，PUT注解一般必须添加相对路径或绝对路径或者全路径,如果不想在PUT注解后添加请求路径,则可以在方法的第一个参数中用@Url注解添加请求路径。</p>
-</blockquote>
-<p> @DELETE</p>
-<blockquote>
-<p>用于发送一个DELETE请求，DELETE注解一般必须添加相对路径或绝对路径或者全路径,如果不想在DELETE注解后添加请求路径,则可以在方法的第一个参数中用@Url注解添加请求路径。</p>
-</blockquote>
-<p> @PATH </p>
-<blockquote>
-<p>作用于方法的参数，在URL路径段中替换指定的参数值。使用String.valueOf()和URL编码将值转换为字符串，使用该注解定义的参数的值不可为空，参数值默认使用URL编码。</p>
-</blockquote>
-<pre><code class="java">@GET(&quot;userInfo/&#123;type&#125;&quot;)
-Call&lt;BaseBean&lt;UserInfoBean&gt;&gt; pathTest(@Path(&quot;type&quot;) String type);
-</code></pre>
-<p>@HEAD </p>
-<blockquote>
-<p>用于发送一个HEAD请求，HEAD注解一般必须添加相对路径或绝对路径或者全路径,如果不想在HEAD注解后添加请求路径,则可以在方法的第一个参数中用@Url注解添加请求路径。</p>
-</blockquote>
-<p>@OPTIONS</p>
-<blockquote>
-<p>用于发送一个OPTIONS请求，OPTIONS注解一般必须添加相对路径或绝对路径或者全路径,如果不想在OPTIONS注解后添加请求路径,则可以在方法的第一个参数中用@Url注解添加请求路径。</p>
-</blockquote>
-<p> @HTTP</p>
-<blockquote>
-<p>@HTTP替换@GET、@POST、@PUT、@DELETE、@HEAD注解的作用以及更多功能拓展，具体使用：通过method、path、hasBody进行设置。</p>
-</blockquote>
-<pre><code class="java">@HTTP(method = &quot;GET&quot;,path = &quot;userInfo/&#123;type&#125;&quot;)//其中hasBody默认是false
-Call&lt;BaseBean&lt;UserInfoBean&gt;&gt; httpTest(@Path(&quot;type&quot;) String type);
-</code></pre>
-<h3 id="标记类"><a href="#标记类" class="headerlink" title="标记类"></a>标记类</h3><p>@FormUrlEncoded </p>
-<blockquote>
-<p>表示请求体是一个Form表单，发送form-encoded的数据，每个键值对需要用@Filed来注解键名，随后的对象需要提供值。<br>用于修饰Field注解和FieldMap注解，使用该注解时，表示请求正文将使用表单网址编码，字段应该声明为参数，并用@Field注释或@FieldMap注释。</p>
-</blockquote>
-<pre><code class="java">@POST(&quot;user_info&quot;)
-@FormUrlEncoded
-Call&lt;BaseBean&lt;UserInfoBean&gt;&gt; postTest2(@Field(&quot;userName&quot;) String userName);
-</code></pre>
-<p>@Multipart </p>
-<blockquote>
-<p>使用该注解,表示请求体是多部分的。 每一部分作为一个参数,且用Part注解声明，随后的对象需要提供值</p>
-</blockquote>
-<p>@Streaming</p>
-<blockquote>
-<p>处理返回Response的方法的响应体，即没有将body（）转换为byte []。</p>
-</blockquote>
-<h3 id="网络请求参数"><a href="#网络请求参数" class="headerlink" title="网络请求参数"></a>网络请求参数</h3><p>@Header @headers</p>
-<blockquote>
-<p>添加请求头 &amp; 添加不固定请求头</p>
-</blockquote>
-<p> @URL </p>
-<blockquote>
-<p>直接传入一个请求的 URL变量 用于URL设置</p>
-</blockquote>
-<blockquote>
-<pre><code>    @GET
-    Call&lt;ResponseBody&gt; testUrlAndQuery(@Url String url, @Query(&quot;showAll&quot;) boolean showAll);
-   // 当有URL注解时，@GET传入的URL就可以省略
-   // 当GET、POST...HTTP等方法中没有设置Url时，则必须使用 &#123;@link Url&#125;提供
-</code></pre>
-</blockquote>
-<p>@Body</p>
-<blockquote>
-<p>以 Post方式 传递 自定义数据类型 给服务器,如果提交的是一个Map，那么作用相当于 @Field,不过Map要经过 FormBody.Builder 类处理成为符合 Okhttp 格式的表单</p>
-</blockquote>
-<p> @Path</p>
-<blockquote>
-<p>URL地址的缺省值</p>
-</blockquote>
-<p> @Field @FieldMap </p>
-<blockquote>
-<p>发送 Post请求 时提交请求的表单字段,与 @FormUrlEncoded 注解配合使用</p>
-</blockquote>
-<p>@Part @PartMap</p>
-<blockquote>
-<p>发送 Post请求 时提交请求的表单字段,与@Field的区别：功能相同，但携带的参数类型更加丰富，包括数据流，所以适用于 有文件上传 的场景,与 @Multipart 注解配合使用</p>
-</blockquote>
-<p> @Query @QueryMap</p>
-<blockquote>
-<p>用于 @GET 方法的查询参数（Query = Url 中 ‘?’ 后面的 key-value）<br>如：url = <a target="_blank" rel="noopener external nofollow noreferrer" href="http://www.println.net/?cate=android%EF%BC%8C%E5%85%B6%E4%B8%AD%EF%BC%8CQuery">http://www.println.net/?cate=android，其中，Query</a> = cate<br>配置时只需要在接口方法中增加一个参数即可</p>
-</blockquote>
-<p>以上注解根据后端接口返回格式灵活运用</p>
-<h3 id="数据解析器（Converter）"><a href="#数据解析器（Converter）" class="headerlink" title="数据解析器（Converter）"></a>数据解析器（Converter）</h3><p>Retrofit支持多种数据解析器，需要在Gradle中添加相关的依赖</p>
-<table>
-<thead>
-<tr>
-<th align="left"><strong>数据解析器</strong></th>
-<th align="center"><strong>Gradle依赖</strong></th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">Gson</td>
-<td align="center">com.squareup.retrofit2:converter-gson:2.9.0</td>
-</tr>
-<tr>
-<td align="left">Jackson</td>
-<td align="center">com.squareup.retrofit2:converter-jackson:2.9.0</td>
-</tr>
-<tr>
-<td align="left">Simple XML</td>
-<td align="center">com.squareup.retrofit2:converter-simplexml:2.9.0</td>
-</tr>
-<tr>
-<td align="left">Protobuf</td>
-<td align="center">com.squareup.retrofit2:converter-protobuf:2.9.0</td>
-</tr>
-<tr>
-<td align="left">Moshi</td>
-<td align="center">com.squareup.retrofit2:converter-moshi:2.9.0</td>
-</tr>
-<tr>
-<td align="left">Wire</td>
-<td align="center">com.squareup.retrofit2:converter-wire:2.9.0</td>
-</tr>
-<tr>
-<td align="left">Scalars</td>
-<td align="center">com.squareup.retrofit2:converter-scalars:2.9.0</td>
-</tr>
-</tbody></table>
-<p>以上是官方支持的7种Converter，这里还有一种我们开发过程中常用的fastJson，这个需要我们做以下步骤来扩展Converter，以支持fastJson：</p>
+<p>在读过<a href="https://blog.popperevan.work/posts/4bd912da/">上一篇</a>文章之后，你是否有以下这些疑问：</p>
 <ol>
-<li><pre><code>implementation &#39;com.alibaba:fastjson:1.1.72.android&#39;
-</code></pre>
+<li>Retrofit具体对OkHttp做了哪些封装或者底层是如何用 OkHttp 请求的</li>
+<li>请求接口具体对加载过程是怎样的</li>
+<li>注解是怎么解析的</li>
+<li>整个请求过程是怎样的</li>
+<li>Converter的转换过程</li>
+<li>如何与RxJava结合使用的</li>
+</ol>
+<p>下面我们在源码的角度来一一的看看Retrofit的具体实现过程。</p>
+<h2 id="首先我们先看下实现请求用到的几个类的含义"><a href="#首先我们先看下实现请求用到的几个类的含义" class="headerlink" title="首先我们先看下实现请求用到的几个类的含义"></a>首先我们先看下实现请求用到的几个类的含义</h2><ol>
+<li><p><strong>Retrofit实例</strong> 通过构建者模式来build一个全局的请求实例类，进行配置所需的基本的一些配置。</p>
 </li>
-<li><p>创建FastJsonRequestBodyConverter类</p>
+<li><p><strong>Call实例</strong> 执行网络请求的是一个顶层接口，需要看源码中的具体实现类实际是一个 <strong>OkHttpCall</strong></p>
+</li>
+<li><p><strong>Callback</strong>  回调，对请求响应结果的回调</p>
 </li>
 </ol>
-<pre><code class="java">public class FastJsonRequestBodyConverter &lt;T&gt; implements Converter&lt;T, RequestBody&gt; &#123;
-    private static final MediaType MEDIA_TYPE = MediaType.parse(&quot;application/json; charset=UTF-8&quot;);
-    @Nullable
-    @Override
-    public RequestBody convert(T value) throws IOException &#123;
-        return RequestBody.create(MEDIA_TYPE, JSON.toJSONBytes(value));
-    &#125;
+<h2 id="请求入口"><a href="#请求入口" class="headerlink" title="请求入口"></a>请求入口</h2><pre><code class="java">Call&lt;T&gt;.enqueue.enqueue
+</code></pre>
+<blockquote>
+<p>service.httpTest(“test”).enqueue函数，其中service.httpTest(“test”)就是上述的Call<T></p>
+</blockquote>
+<p>这是我们在RetrofitService接口中定义的，而在此之前我们需要初始化RetrofitService，然后返回的是 Call 对象。</p>
+<p>我们先看下初始化的creat方法：</p>
+<pre><code class="java">public &lt;T&gt; T create(final Class&lt;T&gt; service) &#123;
+  validateServiceInterface(service);
+  return (T)
+      Proxy.newProxyInstance(
+          service.getClassLoader(),
+          new Class&lt;?&gt;[] &#123;service&#125;,
+          new InvocationHandler() &#123;
+            private final Platform platform = Platform.get();
+            private final Object[] emptyArgs = new Object[0];
+
+            @Override
+            public @Nullable Object invoke(Object proxy, Method method, @Nullable Object[] args)
+                throws Throwable &#123;
+              // If the method is a method from Object then defer to normal invocation.
+              if (method.getDeclaringClass() == Object.class) &#123;
+                return method.invoke(this, args);
+              &#125;
+              args = args != null ? args : emptyArgs;
+              return platform.isDefaultMethod(method)
+                  ? platform.invokeDefaultMethod(method, service, proxy, args)
+                  : loadServiceMethod(method).invoke(args);
+            &#125;
+          &#125;);
 &#125;
 </code></pre>
-<ol start="3">
-<li>创建FastJsonResponseBodyConverter类</li>
+<p>这里首先是validateServiceInterface(service);方法，主要是就是验证我们定义的 RetrofitService是否是一个接口等，其实就是验证RetrofitService的合法性。 </p>
+<p>然后就是通过一个动态代理，返回的RetrofitService实例。</p>
+<blockquote>
+<p>代理模式是Retrofit的一个重点内容，这里就不再赘述什么是动态代理，大家可自行百度。</p>
+</blockquote>
+<p>其中的method，args就是我们RetrofitService中对应的请求方法和参数。</p>
+<p>返回值是一个三目运算，根据isDefaultMethod来决定具体返回什么，如果是默认方法（比如 Java8 ），就执行 platform 的默认方法。<strong>否则执行<code>loadServiceMethod</code>方法的<code>invoke</code>方法</strong>。</p>
+<p><code>loadServiceMethod(method).invoke(args);</code>这个方法是我们这个 Retrofit 最关键的代码。下面我们来具体看看：</p>
+<pre><code class="java">ServiceMethod&lt;?&gt; loadServiceMethod(Method method) &#123;
+  ServiceMethod&lt;?&gt; result = serviceMethodCache.get(method);
+  if (result != null) return result;
+
+  synchronized (serviceMethodCache) &#123;
+    result = serviceMethodCache.get(method);
+    if (result == null) &#123;
+      result = ServiceMethod.parseAnnotations(this, method);
+      serviceMethodCache.put(method, result);
+    &#125;
+  &#125;
+  return result;
+&#125;
+</code></pre>
+<ol>
+<li>serviceMethodCache（ConcurrentHashMap） 中取一个 ServiceMethod</li>
+<li>如果有返回</li>
+<li>如果没有通过parseAnnotations 创建一个</li>
+<li>parseAnnotations方法</li>
 </ol>
-<pre><code class="java">public class FastJsonResponseBodyConverter&lt;T&gt; implements Converter&lt;ResponseBody,T&gt; &#123;
-    private final Type type;
-
-    public FastJsonResponseBodyConverter(Type type) &#123;
-        this.type = type;
-    &#125;
-
-    @Nullable
-    @Override
-    public T convert(ResponseBody value) throws IOException &#123;
-         BufferedSource bufferedSource=Okio.buffer(value.source());
-        String buffer=bufferedSource.readUtf8();
-        bufferedSource.close();
-        return JSON.parseObject(buffer,type);
-    &#125;
-&#125;
-</code></pre>
-<ol start="4">
-<li>首先创建FastJsonConverterFactory 类，并继承Converter.Factory，重写其中的responseBodyConverter方法与requestBodyConverter方法。</li>
-</ol>
-<pre><code class="java">public class FastJsonConverterFactory extends Converter.Factory&#123;
-
-    public static FastJsonConverterFactory create()&#123;
-        return new FastJsonConverterFactory();
-    &#125;
-
-    @Nullable
-    @Override
-    public Converter&lt;ResponseBody, ?&gt; responseBodyConverter(Type type, Annotation[] annotations, Retrofit retrofit) &#123;
-        return new FastJsonResponseBodyConverter&lt;&gt;(type);
-    &#125;
-
-    @Nullable
-    @Override
-    public Converter&lt;?, RequestBody&gt; requestBodyConverter(Type type, Annotation[] parameterAnnotations, Annotation[] methodAnnotations, Retrofit retrofit) &#123;
-        return new FastJsonRequestBodyConverter&lt;&gt;();
-    &#125;
-&#125;
-</code></pre>
+<ul>
+<li>解析<code>method(ApiService的method)</code>中的注解信息，解析注解并保存在<code>RequestFactory</code>工厂中，在请求时再通过<code>RequestFactory</code>将请求信息做拼装</li>
+<li>调用<code>HttpServiceMethod</code>的<code>parseAnnotations</code>创建<code>ServiceMethod</code></li>
+</ul>
 <ol start="5">
-<li>调用</li>
+<li>放入缓存</li>
 </ol>
-<pre><code class="java">Retrofit retrofit=new Retrofit.Builder()
-        .baseUrl(baseUrl)
-        .addConverterFactory(FastJsonConverterFactory.create())
-        .build();
+<img src="https://cdn.jsdelivr.net/gh/evan0929/picture/img/%E6%88%AA%E5%B1%8F2021-12-15%20%E4%B8%8A%E5%8D%8812.36.54.png" alt="截屏2021-12-15 上午12.36.54" style="zoom:50%;" />
+
+<blockquote>
+<p>这里之所以放入缓存，因为我们的请求方法可能会调用多次，缓存提升性能。</p>
+</blockquote>
+<ol start="6">
+<li>我们回过头去继续看parseAnnotations方法，最后返回的是：</li>
+</ol>
+<pre><code class="java">HttpServiceMethod.parseAnnotations(retrofit, method, requestFactory);
 </code></pre>
-<h2 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h2><p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.jianshu.com/p/a3e162261ab6">Android Retrofit 2.0 的详细 使用攻略（含实例讲解)</a></p>
+<ol start="7">
+<li></li>
+</ol>
+<pre><code class="kotlin">#HttpServiceMethod.class
+
+static &lt;ResponseT, ReturnT&gt; HttpServiceMethod&lt;ResponseT, ReturnT&gt; parseAnnotations(
+            Retrofit retrofit, Method method, RequestFactory requestFactory) &#123;
+        boolean isKotlinSuspendFunction = requestFactory.isKotlinSuspendFunction;
+        boolean continuationWantsResponse = false;
+        boolean continuationBodyNullable = false;
+
+        Annotation[] annotations = method.getAnnotations();
+        Type adapterType;
+        //1.获取adapterType，默认为method返回值类型
+        if (isKotlinSuspendFunction) &#123;
+            Type[] parameterTypes = method.getGenericParameterTypes();
+            Type responseType =
+                    Utils.getParameterLowerBound(
+                            0, (ParameterizedType) parameterTypes[parameterTypes.length - 1]);
+            if (getRawType(responseType) == Response.class &amp;&amp; responseType instanceof ParameterizedType) &#123;
+                // Unwrap the actual body type from Response&lt;T&gt;.
+                responseType = Utils.getParameterUpperBound(0, (ParameterizedType) responseType);
+                continuationWantsResponse = true;
+            &#125; else &#123;
+            &#125;
+            adapterType = new Utils.ParameterizedTypeImpl(null, Call.class, responseType);
+            annotations = SkipCallbackExecutorImpl.ensurePresent(annotations);
+        &#125; else &#123;
+            adapterType = method.getGenericReturnType();
+        &#125;
+        //2.创建CallAdapter
+        CallAdapter&lt;ResponseT, ReturnT&gt; callAdapter =
+                createCallAdapter(retrofit, method, adapterType, annotations);
+        Type responseType = callAdapter.responseType();
+        //3.创建responseConverter
+        Converter&lt;ResponseBody, ResponseT&gt; responseConverter =
+                createResponseConverter(retrofit, method, responseType);
+
+        okhttp3.Call.Factory callFactory = retrofit.callFactory;
+        //4.创建HttpServiceMethod类型具体实例
+        if (!isKotlinSuspendFunction) &#123;
+            return new HttpServiceMethod.CallAdapted&lt;&gt;(requestFactory, callFactory, responseConverter, callAdapter);
+        &#125;
+        //兼容kotlin suspend方法
+        else if (continuationWantsResponse) &#123;
+            //noinspection unchecked Kotlin compiler guarantees ReturnT to be Object.
+            return (HttpServiceMethod&lt;ResponseT, ReturnT&gt;)
+                    new HttpServiceMethod.SuspendForResponse&lt;&gt;(
+                            requestFactory,
+                            callFactory,
+                            responseConverter,
+                            (CallAdapter&lt;ResponseT, Call&lt;ResponseT&gt;&gt;) callAdapter);
+        &#125; else &#123;
+            //noinspection unchecked Kotlin compiler guarantees ReturnT to be Object.
+            return (HttpServiceMethod&lt;ResponseT, ReturnT&gt;)
+                    new HttpServiceMethod.SuspendForBody&lt;&gt;(
+                            requestFactory,
+                            callFactory,
+                            responseConverter,
+                            (CallAdapter&lt;ResponseT, Call&lt;ResponseT&gt;&gt;) callAdapter,
+                            continuationBodyNullable);
+        &#125;
+    &#125;
+</code></pre>
+<blockquote>
+<p>注释1：获取<code>adapterType</code>，这里的<code>adapter</code>指的是<code>Retrofit</code>构建时通过<code>addCallAdapterFactory()</code>添加的类型，如果添加的是<code>RxJava</code>那<code>adapterType</code>便是<code>Observable</code>。默认是<code>method</code>返回值，同时也会做<code>kotlin suspend</code>适配</p>
+<p>注释2：创建callAdapter，暂时掠过，下面详细描述</p>
+<p>注释3：创建responseConverter，暂时掠过，下面详细描述</p>
+<p>注释4：这里会创建具体的<code>HttpServiceMethod</code>类型实例，总共有三种类型<code>CallAdapted</code>、<code>SuspendForResponse</code>、<code>SuspendForBody</code>，第一种为默认类型，后两种可兼容kotlin suspend。内部主要做的事情其实很简单，就是通过内部的<code>adapter()</code>调用<code>callAdapter``adapter()</code>，具体代码就不贴了，感兴趣的自行查看</p>
+</blockquote>
+<ol start="8">
+<li><code>invoke()</code>方法： 创建了一个<code>OkHttpCall</code>实例，它内部其实就是对<code>OkHttp</code>的一系列操作。返回的<code>Call</code>对象没做任何操作，而是传入到<code>adapter()</code>方法一并返回来，字面意思应该是一个适配操作。</li>
+</ol>
+<blockquote>
+<p>这里的代理模式有以下优势：1. 通过代理模式做一个<code>切面操作(AOP)</code>完美规避方法注解解析的操作浸入到业务的问题 2.事先不知道<code>RetrofitService</code>方法数量，就算知道也避免不了逐一解析而产生大量的模版代码，此时可通过引入<code>动态代理</code>在运行时动态解析</p>
+</blockquote>
+<p>我们看到这里其实解决了两个疑惑：1. 注解解析 2.请求接口的关联。那么我们继续往下看invoke()方法：</p>
+<pre><code class="java">@Override
+final @Nullable ReturnT invoke(Object[] args) &#123;
+  Call&lt;ResponseT&gt; call = new OkHttpCall&lt;&gt;(requestFactory, args, callFactory, responseConverter);
+  return adapt(call, args);
+&#125;
+</code></pre>
+<ul>
+<li>创建了一个Call对象，是 OkHttpCall，这里就知道接口声明的 Call 对象是怎么来的了</li>
+<li>返回adapt，在不使用 Kotlin 协程的情况下，其实调用的是子类 CallAdapted 的 <code>adapt</code></li>
+</ul>
+<p>HttpServiceMethod的实现类的<code>adapter</code>会执行对应<code>CallAdapter</code>的<code>adapter</code> 我们就取默认的<code>CallAdapter</code> 即<code>DefaultCallAdapterFactory</code>通过<code>get</code>获取的<code>CallAdapter</code></p>
+<pre><code class="java">#DefaultCallAdapterFactory.class 
+  public @Nullable CallAdapter&lt;?, ?&gt; get(
+  return new CallAdapter&lt;Object, Call&lt;?&gt;&gt;() &#123; 
+    @Override            
+    public Type responseType() &#123;   
+      return responseType;           
+    &#125; 
+    @Override  
+    public Call&lt;Object&gt; adapt(Call&lt;Object&gt; call) &#123; 
+      return executor == null ? call : new DefaultCallAdapterFactory.ExecutorCallbackCall&lt;&gt;(executor, call);                    &#125;    
+  &#125;;  
+ &#125;
+</code></pre>
+<p>内部<code>adapt</code>即<code>ApiService method</code>最终返回的<code>ExecutorCallbackCall</code>是<code>OkHttpCall</code>装饰类，最后可通过<code>OkHttpCall</code>的<code>execute</code>发起请求，代码如下：</p>
+<pre><code class="java">#OkHttpCall.class
+
+public Response&lt;T&gt; execute() throws IOException &#123;
+        okhttp3.Call call;
+        ...
+        return parseResponse(call.execute());
+    &#125;
+</code></pre>
+<p><code>OkHttp</code>常规操作，再把关注点放到<code>onResponse</code>的<code>parseResponse</code></p>
+<pre><code class="java">#OkHttpCall.class 
+Response&lt;T&gt; parseResponse(okhttp3.Response rawResponse) throws IOException &#123; 
+...        T body = responseConverter.convert(catchingBody);
+...        return Response.success(body, rawResponse); 
+&#125;
+</code></pre>
+<p><code>responseConverter</code>会对<code>Body</code>做一个适配，如果<code>addConverterFactory</code>添加了<code>GsonConvert</code>那解析操作就会在此处进行.这个地方就解决我们疑惑对于Converter如何处理的遗憾，当然此处可以结合前面关于如何添加fastJson的实例使用，更香！</p>
+<ol start="9">
+<li>还有最后一个问题就是如何和RxJava结合使用，这里就要解析下callAdapter这个了：</li>
+</ol>
+<ul>
+<li>创建callAdapter</li>
+</ul>
+<pre><code class="java">#HttpServiceMethod.class 
+private static &lt;ResponseT, ReturnT&gt; CallAdapter&lt;ResponseT, ReturnT&gt; createCallAdapter( 
+    Retrofit retrofit, Method method, Type returnType, Annotation[] annotations) &#123;  
+    return (CallAdapter&lt;ResponseT, ReturnT&gt;) retrofit.callAdapter(returnType, annotations);  
+... 
+&#125;
+</code></pre>
+<p>通过<code>retrofit#callAdapter()</code>获取<code>CallAdapter</code>，继续跟</p>
+<ul>
+<li><pre><code class="java">#Retrofit.class
+public CallAdapter&lt;?, ?&gt; callAdapter(Type returnType, Annotation[] annotations) &#123; 
+    return nextCallAdapter(null, returnType, annotations); &#125; public CallAdapter&lt;?, ?&gt; nextCallAdapter(                @Nullable 
+    CallAdapter.Factory skipPast, Type returnType, Annotation[] annotations) &#123; 
+      int start = callAdapterFactories.indexOf(skipPast) + 1;  
+      for (int i = start, count = callAdapterFactories.size(); i &lt; count; i++) &#123;   
+        //通过returnType在callAdapterFactories获取adapter工厂，再get adapter
+      CallAdapter&lt;?, ?&gt; adapter = callAdapterFactories.get(i).get(returnType, annotations, this);                        if (adapter != null) &#123; 
+      return adapter;     
+     &#125;  
+  &#125;  
+    ...  
+&#125;
+</code></pre>
+<p>先通过<code>returnType</code>在<code>callAdapterFactories</code>获取adapter工厂，再通过工厂<code>get()</code>获取<code>CallAdapter</code>实例。<code>callAdapterFactories</code>是<code>3.1</code>结尾<code>build()</code>中初始化的，通过<code>platform</code>添加默认类型，也可以通过<code>addCallAdapterFactory()</code>添加<code>RxJava</code>之类的适配器类型。</p>
+<p>这里用到了两个设计模式<code>适配器</code>跟<code>策略</code></p>
+<p><strong>适配器模式</strong></p>
+<p>返回的<code>CallAdapter</code>其实就是<code>Call&lt;T&gt;</code>的适配器，假如你想让<code>Retrofit</code>配合<code>RxJava</code>使用，常规方式只能在业务中单独创建<code>Observable</code>并与<code>Call</code>融合，关于<code>Observable</code>与<code>Call</code>融合(适配)其实是与业务无关的，此时可以引入适配器模式将<code>Call</code>适配成<code>Observable</code>，将适配细节从业务层挪到<code>Retrofit</code>内部，符合<code>迪米特法则</code></p>
+<p><strong>策略模式</strong></p>
+<p>通过<code>ReturnT</code>获取对应的<code>CallAdapter</code>，如果<code>ReturnT</code>是<code>Call&lt;T&gt;</code>那获取的是<code>DefaultCallAdapterFactory</code>创建的实例，如果是<code>Observable&lt;T&gt;</code>则获取的是<code>RxJava2CallAdapterFactory</code>创建的实例。假如想新增一种适配器只需明确<code>ReturnT</code>，创建对应工厂再通过<code>addCallAdapterFactory</code>添加即可，<code>Retrofit</code>会通过<code>ReturnT</code>自动寻找对应<code>CallAdapter</code>，符合<code>开闭原则(扩展开放)</code></p>
+</li>
+</ul>
+<p>最后总结下Retrofit的整体请求流程：</p>
+<img src="https://cdn.jsdelivr.net/gh/evan0929/picture/img/%E6%88%AA%E5%B1%8F2021-12-15%20%E4%B8%8A%E5%8D%881.31.24.png" alt="截屏2021-12-15 上午1.31.24" style="zoom:50%;" />
+
+<p>Retrofit源码相关的内容就先解析到这吧</p>
 
         
                 <blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;">
@@ -825,7 +796,7 @@ Call&lt;BaseBean&lt;UserInfoBean&gt;&gt; postTest2(@Field(&quot;userName&quot;) 
                             本博客所有文章除特别说明外，均采用 <a href="/creativecommons.html" target="_blank">CC BY-NC-SA 4.0 Unported License</a> 协议。转载请注明出处！
                         </strong>
                         <br>
-                        <strong>本文链接：</strong><a href="https://blog.popperevan.work/posts/4bd912da/">https://blog.popperevan.work/posts/4bd912da/</a>
+                        <strong>本文链接：</strong><a href="https://blog.popperevan.work/posts/6cf2e7d7/">https://blog.popperevan.work/posts/6cf2e7d7/</a>
                     </p>
                 </blockquote>
         
@@ -881,7 +852,7 @@ Call&lt;BaseBean&lt;UserInfoBean&gt;&gt; postTest2(@Field(&quot;userName&quot;) 
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
     
-        <a href="/posts/88a80a38/" id="post_nav-newer" class="prev-content">
+        <a href="/posts/ff8004af/" id="post_nav-newer" class="prev-content">
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
                 <i class="material-icons">arrow_back</i>
             </button>
@@ -895,7 +866,7 @@ Call&lt;BaseBean&lt;UserInfoBean&gt;&gt; postTest2(@Field(&quot;userName&quot;) 
 
     <!-- Next Nav -->
     
-        <a href="/posts/d717c770/" id="post_nav-older" class="next-content">
+        <a href="/posts/88a80a38/" id="post_nav-older" class="next-content">
             下一篇
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">

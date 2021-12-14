@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://blog.popperevan.work/posts/ff8004af/</loc>
+    <loc>https://blog.popperevan.work/posts/6cf2e7d7/</loc>
     
     <lastmod>2021-12-14</lastmod>
     
@@ -12,6 +12,15 @@
   
   <url>
     <loc>https://blog.popperevan.work/posts/4bd912da/</loc>
+    
+    <lastmod>2021-12-14</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.popperevan.work/posts/ff8004af/</loc>
     
     <lastmod>2021-12-14</lastmod>
     
@@ -146,6 +155,20 @@
   
   <url>
     <loc>https://blog.popperevan.work/tags/itrem2-zsh/</loc>
+    <lastmod>2021-12-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.popperevan.work/tags/Retrofit/</loc>
+    <lastmod>2021-12-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.popperevan.work/tags/%E7%BD%91%E7%BB%9C/</loc>
     <lastmod>2021-12-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
